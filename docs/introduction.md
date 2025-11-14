@@ -30,211 +30,210 @@ Each table links to detailed documentation for that group.
 
 ### Pipeline config
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/config` | `GET` | Get pipeline configuration | [Pipeline Config](./endpoints/pipelines.md#pipeline-config) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/config` | `PUT` | Update pipeline configuration | [Pipeline Config](./endpoints/pipelines.md#pipeline-config) |
+| Description                   | Method | Endpoint                                                         |
+|-------------------------------|--------|------------------------------------------------------------------|
+| [Get pipeline configuration](./endpoints/pipelines.md#pipeline-config)    | `GET`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
+| [Update pipeline configuration](./endpoints/pipelines.md#pipeline-config) | `PUT`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
 
 ---
 
-### 🛠️ Builds
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/builds` | `GET` | List all builds | [Builds](./endpoints/builds.md) |
-| `/api/v1/builds/:build_id` | `GET` | Get build details | [Builds](./endpoints/builds.md#build-details) |
-| `/api/v1/builds/:build_id/plan` | `GET` | Get build plan | [Builds](./endpoints/builds.md#build-plan) |
-| `/api/v1/builds/:build_id/events` | `GET` | Stream build events | [Builds](./endpoints/builds.md#build-events) |
-| `/api/v1/builds/:build_id/resources` | `GET` | Get build resources | [Builds](./endpoints/builds.md#build-resources) |
-| `/api/v1/builds/:build_id/abort` | `PUT` | Abort a build | [Builds](./endpoints/builds.md#abort-build) | 
-| `/api/v1/builds/:build_id/preparation` | `GET` | Get build preparation status | [Builds](./endpoints/builds.md#build-preparation) |
-| `/api/v1/builds/:build_id/artifacts` | `GET` | List build artifacts | [Builds](./endpoints/builds.md#build-artifacts) |
-| `/api/v1/builds/:build_id/comment` | `PUT` | Add comment to build | [Builds](./endpoints/builds.md#build-comment) |
+### Builds
+
+| Description                      | Method | Endpoint                                      |
+|----------------------------------|--------|-----------------------------------------------|
+| [List all builds](./endpoints/builds.md) | `GET`  | `/api/v1/builds`                              |
+| [Get build details](./endpoints/builds.md#build-details) | `GET`  | `/api/v1/builds/:build_id`                    |
+| [Get build plan](./endpoints/builds.md#build-plan) | `GET`  | `/api/v1/builds/:build_id/plan`               |
+| [Stream build events](./endpoints/builds.md#build-events) | `GET`  | `/api/v1/builds/:build_id/events`             |
+| [Get build resources](./endpoints/builds.md#build-resources) | `GET`  | `/api/v1/builds/:build_id/resources`          |
+| [Abort a build](./endpoints/builds.md#abort-build) | `PUT`  | `/api/v1/builds/:build_id/abort`              |
+| [Get build preparation status](./endpoints/builds.md#build-preparation) | `GET`  | `/api/v1/builds/:build_id/preparation`        |
+| [List build artifacts](./endpoints/builds.md#build-artifacts) | `GET`  | `/api/v1/builds/:build_id/artifacts`          |
+| [Add comment to build](./endpoints/builds.md#build-comment) | `PUT`  | `/api/v1/builds/:build_id/comment`            |
 
 ---
 
-### 🔧 Jobs
+### Jobs
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/jobs` | `GET` | List all jobs | [Jobs](./endpoints/jobs.md) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs` | `GET` | List jobs in a pipeline | [Jobs](./endpoints/jobs.md#jobs-in-pipeline) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name` | `GET` | Get job details | [Jobs](./endpoints/jobs.md#job-details) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` | `GET` | List builds for a job | [Jobs](./endpoints/jobs.md#job-builds) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` | `POST` | Trigger a job build | [Jobs](./endpoints/jobs.md#trigger-build) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` | `POST` | Rerun a build | [Jobs](./endpoints/jobs.md#rerun-build) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/inputs` | `GET` | Get job inputs | [Jobs](./endpoints/jobs.md#job-inputs) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` | `GET` | Get specific build for a job | [Jobs](./endpoints/jobs.md#specific-build) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/pause` | `PUT` | Pause a job | [Jobs](./endpoints/jobs.md#pause-unpause) | 
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/unpause` | `PUT` | Unpause a job | [Jobs](./endpoints/jobs.md#pause-unpause) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/schedule` | `PUT` | Enable/disable job scheduling | [Jobs](./endpoints/jobs.md#enable-disable-scheduling) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/badge` | `GET` | Get job status badge (SVG) | [Jobs](./endpoints/jobs.md#job-badge) |
-| `/api/v1/pipelines/:pipeline_name/jobs/:job_name/badge` | `GET` | Get job status badge (SVG, no team) | [Jobs](./endpoints/jobs.md#job-badge) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/tasks/:step_name/cache` | `DELETE` | Clear task cache | [Jobs](./endpoints/jobs.md#clear-task-cache) |
+| Description                                   | Method | Endpoint                                      |
+|-----------------------------------------------|--------|-----------------------------------------------|
+| [List all jobs](./endpoints/jobs.md) | `GET` | `/api/v1/jobs` |
+| [List jobs in a pipeline](./endpoints/jobs.md#jobs-in-pipeline) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs` |
+| [Get job details](./endpoints/jobs.md#job-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name` |
+| [List builds for a job](./endpoints/jobs.md#job-builds) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` |
+| [Trigger a job build](./endpoints/jobs.md#trigger-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` |
+| [Rerun a build](./endpoints/jobs.md#rerun-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` |
+| [Get job inputs](./endpoints/jobs.md#job-inputs) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/inputs` |
+| [Get specific build for a job](./endpoints/jobs.md#specific-build) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` |
+| [Pause a job](./endpoints/jobs.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/pause` |
+| [Unpause a job](./endpoints/jobs.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/unpause` |
+| [Enable/disable job scheduling](./endpoints/jobs.md#enable-disable-scheduling) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/schedule` |
+| [Get job status badge (SVG)](./endpoints/jobs.md#job-badge) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/badge` |
+| [Get job status badge (SVG, no team)](./endpoints/jobs.md#job-badge) | `GET` | `/api/v1/pipelines/:pipeline_name/jobs/:job_name/badge` |
+| [Clear task cache](./endpoints/jobs.md#clear-task-cache) | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/tasks/:step_name/cache` |
 ---
 
 ### Pipelines
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/pipelines` | `GET` | List all pipelines (across teams) | [Pipelines](./endpoints/pipelines.md#list-all-pipelines) |
-| `/api/v1/teams/:team_name/pipelines` | `GET` | List pipelines for a team | [Pipelines](./endpoints/pipelines.md#list-team-pipelines) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name` | `GET` | Get pipeline details | [Pipelines](./endpoints/pipelines.md#pipeline-details) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name` | `DELETE` | Delete a pipeline | [Pipelines](./endpoints/pipelines.md#delete-pipeline) |
-| `/api/v1/teams/:team_name/pipelines/ordering` | `PUT` | Set pipeline ordering for a team | [Pipelines](./endpoints/pipelines.md#order-pipelines) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/ordering` | `PUT` | Set pipeline ordering within a group | [Pipelines](./endpoints/pipelines.md#order-pipelines-group) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/pause` | `PUT` | Pause a pipeline | [Pipelines](./endpoints/pipelines.md#pause-unpause) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/archive` | `PUT` | Archive a pipeline | [Pipelines](./endpoints/pipelines.md#archive) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/unpause` | `PUT` | Unpause a pipeline | [Pipelines](./endpoints/pipelines.md#pause-unpause) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/expose` | `PUT` | Expose a pipeline | [Pipelines](./endpoints/pipelines.md#expose-hide) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/hide` | `PUT` | Hide a pipeline | [Pipelines](./endpoints/pipelines.md#expose-hide) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/versions-db` | `GET` | Get pipeline versions database | [Pipelines](./endpoints/pipelines.md#versions-db) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/rename` | `PUT` | Rename a pipeline | [Pipelines](./endpoints/pipelines.md#rename) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` | `GET` | List builds for a pipeline | [Pipelines](./endpoints/pipelines.md#pipeline-builds) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` | `POST` | Create a build for a pipeline | [Pipelines](./endpoints/pipelines.md#create-build) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/badge` | `GET` | Get pipeline status badge (SVG) | [Pipelines](./endpoints/pipelines.md#pipeline-badge) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [List all pipelines (across teams)](./endpoints/pipelines.md#list-all-pipelines) | `GET` | `/api/v1/pipelines` |
+| [List pipelines for a team](./endpoints/pipelines.md#list-team-pipelines) | `GET` | `/api/v1/teams/:team_name/pipelines` |
+| [Get pipeline details](./endpoints/pipelines.md#pipeline-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
+| [Delete a pipeline](./endpoints/pipelines.md#delete-pipeline) | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
+| [Set pipeline ordering for a team](./endpoints/pipelines.md#order-pipelines) | `PUT` | `/api/v1/teams/:team_name/pipelines/ordering` |
+| [Set pipeline ordering within a group](./endpoints/pipelines.md#order-pipelines-group) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/ordering` |
+| [Pause a pipeline](./endpoints/pipelines.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/pause` |
+| [Archive a pipeline](./endpoints/pipelines.md#archive) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/archive` |
+| [Unpause a pipeline](./endpoints/pipelines.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/unpause` |
+| [Expose a pipeline](./endpoints/pipelines.md#expose-hide) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/expose` |
+| [Hide a pipeline](./endpoints/pipelines.md#expose-hide) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/hide` |
+| [Get pipeline versions database](./endpoints/pipelines.md#versions-db) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/versions-db` |
+| [Rename a pipeline](./endpoints/pipelines.md#rename) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/rename` |
+| [List builds for a pipeline](./endpoints/pipelines.md#pipeline-builds) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` |
+| [Create a build for a pipeline](./endpoints/pipelines.md#create-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` |
+| [Get pipeline status badge (SVG)](./endpoints/pipelines.md#pipeline-badge) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/badge` |
 
 ---
 
 ### Resources
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/resources` | `GET` | List all resources across pipelines | [Resources](./endpoints/resources.md#list-all-resources) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources` | `GET` | List resources in a pipeline | [Resources](./endpoints/resources.md#list-resources) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/shared` | `GET` | List shared info for a resource | [Resources](./endpoints/resources.md#shared-resource) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/shared` | `GET` | List shared info for a resource type | [Resources](./endpoints/resources.md#shared-resource-type) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types` | `GET` | List resource types in a pipeline | [Resources](./endpoints/resources.md#list-resource-types) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name` | `GET` | Get resource details | [Resources](./endpoints/resources.md#get-resource) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check` | `POST` | Trigger resource check | [Resources](./endpoints/resources.md#check-resource) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check/webhook` | `POST` | Trigger resource check via webhook | [Resources](./endpoints/resources.md#check-resource-webhook) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/check` | `POST` | Trigger resource type check | [Resources](./endpoints/resources.md#check-resource-type) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/prototypes/:prototype_name/check` | `POST` | Trigger prototype check | [Resources](./endpoints/resources.md#check-prototype) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/cache` | `DELETE` | Clear resource cache | [Resources](./endpoints/resources.md#clear-resource-cache) |
+| Description                                                      | Method   | Endpoint                                                                 |
+|------------------------------------------------------------------|----------|-------------------------------------------------------------------------|
+| [List all resources across pipelines](./endpoints/resources.md#list-all-resources) | `GET`    | `/api/v1/resources`                                                      |
+| [List resources in a pipeline](./endpoints/resources.md#list-resources)           | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources`            |
+| [List shared info for a resource](./endpoints/resources.md#shared-resource)       | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/shared` |
+| [List shared info for a resource type](./endpoints/resources.md#shared-resource-type) | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/shared` |
+| [List resource types in a pipeline](./endpoints/resources.md#list-resource-types) | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types`       |
+| [Get resource details](./endpoints/resources.md#get-resource)                     | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name` |
+| [Trigger resource check](./endpoints/resources.md#check-resource)                 | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check` |
+| [Trigger resource check via webhook](./endpoints/resources.md#check-resource-webhook) | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check/webhook` |
+| [Trigger resource type check](./endpoints/resources.md#check-resource-type)       | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/check` |
+| [Trigger prototype check](./endpoints/resources.md#check-prototype)               | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/prototypes/:prototype_name/check` |
+| [Clear resource cache](./endpoints/resources.md#clear-resource-cache)             | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/cache` |
 
 ---
 
 ### Resource Versions
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions` | `GET` | List resource versions | [Resource Versions](./endpoints/resource-versions.md#list-resource-versions) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions` | `DELETE` | Clear all resource versions | [Resource Versions](./endpoints/resource-versions.md#clear-resource-versions) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/versions` | `DELETE` | Clear all resource type versions | [Resource Versions](./endpoints/resource-versions.md#clear-resource-type-versions) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id` | `GET` | Get details for a resource version | [Resource Versions](./endpoints/resource-versions.md#get-resource-version) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/enable` | `PUT` | Enable a resource version | [Resource Versions](./endpoints/resource-versions.md#enable-disable-version) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/disable` | `PUT` | Disable a resource version | [Resource Versions](./endpoints/resource-versions.md#enable-disable-version) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/pin` | `PUT` | Pin a resource version | [Resource Versions](./endpoints/resource-versions.md#pin-unpin-version) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/unpin` | `PUT` | Unpin a resource | [Resource Versions](./endpoints/resource-versions.md#pin-unpin-version) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/pin_comment` | `PUT` | Set pin comment on resource | [Resource Versions](./endpoints/resource-versions.md#set-pin-comment) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/input_to` | `GET` | List builds with version as input | [Resource Versions](./endpoints/resource-versions.md#builds-with-version-input) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/output_of` | `GET` | List builds with version as output | [Resource Versions](./endpoints/resource-versions.md#builds-with-version-output) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/downstream` | `GET` | Get downstream resource causality | [Resource Versions](./endpoints/resource-versions.md#downstream-causality) |
-| `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/upstream` | `GET` | Get upstream resource causality | [Resource Versions](./endpoints/resource-versions.md#upstream-causality) |
-
----
+| Description                                                                                                 | Method   | Endpoint                                                                                                         |
+|-------------------------------------------------------------------------------------------------------------|----------|------------------------------------------------------------------------------------------------------------------|
+| [List resource versions](./endpoints/resource-versions.md#list-resource-versions)                           | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions`                            |
+| [Clear all resource versions](./endpoints/resource-versions.md#clear-resource-versions)                     | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions`                            |
+| [Clear all resource type versions](./endpoints/resource-versions.md#clear-resource-type-versions)           | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/versions`                  |
+| [Get details for a resource version](./endpoints/resource-versions.md#get-resource-version-details)          | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id` |
+| [Enable a resource version](./endpoints/resource-versions.md#enable-resource-version)                       | `PUT`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/enable` |
+| [Disable a resource version](./endpoints/resource-versions.md#disable-resource-version)                     | `PUT`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/disable` |
+| [Pin a resource version](./endpoints/resource-versions.md#pin-resource-version)                             | `PUT`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/pin` |
+| [Unpin a resource](./endpoints/resource-versions.md#unpin-resource)                                         | `PUT`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/unpin`                               |
+| [Set pin comment on resource](./endpoints/resource-versions.md#set-pin-comment)                             | `PUT`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/pin_comment`                         |
+| [List builds with version as input](./endpoints/resource-versions.md#list-builds-with-version-as-input)     | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/input_to` |
+| [List builds with version as output](./endpoints/resource-versions.md#list-builds-with-version-as-output)   | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/output_of` |
+| [Get downstream resource causality](./endpoints/resource-versions.md#get-downstream-causality)              | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/downstream` |
+| [Get upstream resource causality](./endpoints/resource-versions.md#get-upstream-causality)                  | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/upstream`   |
 
 ### CCMenu
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/teams/:team_name/cc.xml` | `GET` | Generate CCMenu XML feed for pipelines | [CCMenu](./endpoints/ccmenu.md) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [Generate CCMenu XML feed for pipelines](./endpoints/ccmenu.md) | `GET` | `/api/v1/teams/:team_name/cc.xml` |
 
 ---
 
 ### Workers
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/workers` | `GET` | List all workers | [Workers](./endpoints/workers.md#list-workers) |
-| `/api/v1/workers` | `POST` | Register a new worker | [Workers](./endpoints/workers.md#register-worker) |
-| `/api/v1/workers/:worker_name/land` | `PUT` | Land a worker | [Workers](./endpoints/workers.md#land-worker) |
-| `/api/v1/workers/:worker_name/retire` | `PUT` | Retire a worker | [Workers](./endpoints/workers.md#retire-worker) |
-| `/api/v1/workers/:worker_name/prune` | `PUT` | Prune a worker | [Workers](./endpoints/workers.md#prune-worker) |
-| `/api/v1/workers/:worker_name/heartbeat` | `PUT` | Heartbeat a worker | [Workers](./endpoints/workers.md#heartbeat-worker) |
-| `/api/v1/workers/:worker_name` | `DELETE` | Delete a worker | [Workers](./endpoints/workers.md#delete-worker) |
+| Description                                   | Method | Endpoint                                      |
+|-----------------------------------------------|--------|-----------------------------------------------|
+| [List all workers](./endpoints/workers.md#list-workers)           | `GET`  | `/api/v1/workers`                             |
+| [Register a new worker](./endpoints/workers.md#register-worker)   | `POST` | `/api/v1/workers`                             |
+| [Land a worker](./endpoints/workers.md#land-worker)               | `PUT`  | `/api/v1/workers/:worker_name/land`           |
+| [Retire a worker](./endpoints/workers.md#retire-worker)           | `PUT`  | `/api/v1/workers/:worker_name/retire`         |
+| [Prune a worker](./endpoints/workers.md#prune-worker)             | `PUT`  | `/api/v1/workers/:worker_name/prune`          |
+| [Heartbeat a worker](./endpoints/workers.md#heartbeat-worker)     | `PUT`  | `/api/v1/workers/:worker_name/heartbeat`      |
+| [Delete a worker](./endpoints/workers.md#delete-worker)           | `DELETE` | `/api/v1/workers/:worker_name`               |
 
 ---
 
 ### Cluster info
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/log-level` | `GET` | Get current log level | [Cluster Info](./endpoints/cluster-info.md#get-log-level) |
-| `/api/v1/log-level` | `PUT` | Set log level | [Cluster Info](./endpoints/cluster-info.md#set-log-level) |
-| `/api/v1/cli` | `GET` | Download Concourse CLI binary | [Cluster Info](./endpoints/cluster-info.md#download-cli) |
-| `/api/v1/info` | `GET` | Get cluster info | [Cluster Info](./endpoints/cluster-info.md#get-info) |
-| `/api/v1/info/creds` | `GET` | Get credential manager info | [Cluster Info](./endpoints/cluster-info.md#get-info-creds) |
+| Description                                   | Method | Endpoint                   |
+|-----------------------------------------------|--------|----------------------------|
+| [Get current log level](./endpoints/cluster-info.md#get-log-level)         | `GET`  | `/api/v1/log-level`         |
+| [Set log level](./endpoints/cluster-info.md#set-log-level)                 | `PUT`  | `/api/v1/log-level`         |
+| [Download Concourse CLI binary](./endpoints/cluster-info.md#download-cli)  | `GET`  | `/api/v1/cli`               |
+| [Get cluster info](./endpoints/cluster-info.md#get-info)                   | `GET`  | `/api/v1/info`              |
+| [Get credential manager info](./endpoints/cluster-info.md#get-info-creds)  | `GET`  | `/api/v1/info/creds`        |
 
 ---
 
 ### Users
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/user` | `GET` | Get current user info | [Users](./endpoints/users.md#get-user) |
-| `/api/v1/users` | `GET` | List active users since timestamp | [Users](./endpoints/users.md#list-active-users-since) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [Get current user info](./endpoints/users.md#get-user) | `GET` | `/api/v1/user` |
+| [List active users since timestamp](./endpoints/users.md#list-active-users-since) | `GET` | `/api/v1/users` |
 
 ---
 
 ### Containers
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/containers/destroying` | `GET` | List destroying containers | [Containers](./endpoints/containers.md#list-destroying-containers) |
-| `/api/v1/containers/report` | `PUT` | Report worker containers | [Containers](./endpoints/containers.md#report-worker-containers) |
-| `/api/v1/teams/:team_name/containers` | `GET` | List containers for a team | [Containers](./endpoints/containers.md#list-containers) |
-| `/api/v1/teams/:team_name/containers/:id` | `GET` | Get container details | [Containers](./endpoints/containers.md#get-container) |
-| `/api/v1/teams/:team_name/containers/:id/hijack` | `GET` | Hijack a container | [Containers](./endpoints/containers.md#hijack-container) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [List containers for a team](./endpoints/containers.md#list-containers) | `GET` | `/api/v1/teams/:team_name/containers` |
+| [Get container details](./endpoints/containers.md#get-container) | `GET` | `/api/v1/teams/:team_name/containers/:id` |
+| [Hijack a container](./endpoints/containers.md#hijack-container) | `GET` | `/api/v1/teams/:team_name/containers/:id/hijack` |
+| [List destroying containers](./endpoints/containers.md#list-destroying-containers) | `GET` | `/api/v1/containers/destroying` |
+| [Report worker containers](./endpoints/containers.md#report-worker-containers) | `PUT` | `/api/v1/containers/report` |
 
 ---
 
 ### Volumes
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/teams/:team_name/volumes` | `GET` | List volumes for a team | [Volumes](./endpoints/volumes.md#list-volumes) |
-| `/api/v1/volumes/destroying` | `GET` | List destroying volumes | [Volumes](./endpoints/volumes.md#list-destroying-volumes) |
-| `/api/v1/volumes/report` | `PUT` | Report worker volumes | [Volumes](./endpoints/volumes.md#report-worker-volumes) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [List volumes](./endpoints/volumes.md#list-volumes) | `GET` | `/api/v1/teams/:team_name/volumes` |
+| [List destroying volumes](./endpoints/volumes.md#list-destroying-volumes) | `GET` | `/api/v1/volumes/destroying` |
+| [Report worker volumes](./endpoints/volumes.md#report-worker-volumes) | `PUT` | `/api/v1/volumes/report` |
 
 ---
 
 ### Teams
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/teams` | `GET` | List all teams | [Teams](./endpoints/teams.md#list-teams) |
-| `/api/v1/teams/:team_name` | `GET` | Get team details | [Teams](./endpoints/teams.md#get-team) |
-| `/api/v1/teams/:team_name` | `PUT` | Set team configuration | [Teams](./endpoints/teams.md#set-team) |
-| `/api/v1/teams/:team_name/rename` | `PUT` | Rename a team | [Teams](./endpoints/teams.md#rename-team) |
-| `/api/v1/teams/:team_name` | `DELETE` | Delete a team | [Teams](./endpoints/teams.md#delete-team) |
-| `/api/v1/teams/:team_name/builds` | `GET` | List builds for a team | [Teams](./endpoints/teams.md#list-team-builds) |
-| `/api/v1/teams/:team_name/builds` | `POST` | Create a build for a team | [Teams](./endpoints/teams.md#create-team-build) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [List all teams](./endpoints/teams.md#list-teams) | `GET` | `/api/v1/teams` |
+| [Get team details](./endpoints/teams.md#get-team) | `GET` | `/api/v1/teams/:team_name` |
+| [Set team configuration](./endpoints/teams.md#set-team) | `PUT` | `/api/v1/teams/:team_name` |
+| [Rename a team](./endpoints/teams.md#rename-team) | `PUT` | `/api/v1/teams/:team_name/rename` |
+| [Delete a team](./endpoints/teams.md#delete-team) | `DELETE` | `/api/v1/teams/:team_name` |
+| [List builds for a team](./endpoints/teams.md#list-team-builds) | `GET` | `/api/v1/teams/:team_name/builds` |
+| [Create a build for a team](./endpoints/teams.md#create-team-build) | `POST` | `/api/v1/teams/:team_name/builds` |
 
 ---
 
 ### Artifacts
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/teams/:team_name/artifacts` | `POST` | Create an artifact | [Artifacts](./endpoints/artifacts.md#create-artifact) |
-| `/api/v1/teams/:team_name/artifacts/:artifact_id` | `GET` | Get artifact details | [Artifacts](./endpoints/artifacts.md#get-artifact) |
+| Description            | Method | Endpoint                                               |
+|------------------------|--------|--------------------------------------------------------|
+| [Create an artifact](./endpoints/artifacts.md#create-artifact) | `POST` | `/api/v1/teams/:team_name/artifacts`                  |
+| [Get artifact details](./endpoints/artifacts.md#get-artifact)  | `GET`  | `/api/v1/teams/:team_name/artifacts/:artifact_id`     |
 
 ---
 
 ### Wall
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/api/v1/wall` | `GET` | Get wall message | [Wall](./endpoints/wall.md#get-wall) |
-| `/api/v1/wall` | `PUT` | Set wall message | [Wall](./endpoints/wall.md#set-wall) |
-| `/api/v1/wall` | `DELETE` | Clear wall message | [Wall](./endpoints/wall.md#clear-wall) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [Get wall message](./endpoints/wall.md#get-wall) | `GET` | `/api/v1/wall` |
+| [Set wall message](./endpoints/wall.md#set-wall) | `PUT` | `/api/v1/wall` |
+| [Clear wall message](./endpoints/wall.md#clear-wall) | `DELETE` | `/api/v1/wall` |
 
 ---
 
 ### Well known
 
-| Endpoint | Method | Description | Details |
-|-----------|---------|-------------|----------|
-| `/.well-known/openid-configuration` | `GET` | Get OpenID Connect configuration | [Well Known](./endpoints/well-known.md#get-openid-configuration) |
-| `/.well-known/jwks.json` | `GET` | Get signing keys (JWKS) | [Well Known](./endpoints/well-known.md#get-signing-keys) |
+| Description | Method | Endpoint |
+|-------------|--------|----------|
+| [Get OpenID Connect configuration](./endpoints/well-known.md#get-openid-configuration) | `GET` | `/.well-known/openid-configuration` |
+| [Get signing keys (JWKS)](./endpoints/well-known.md#get-signing-keys) | `GET` | `/.well-known/jwks.json` |
 
 ---
 
