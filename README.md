@@ -38,7 +38,7 @@ Each table links to detailed documentation for that group.
 | Description                   | Method | Endpoint                                                         |
 |-------------------------------|--------|------------------------------------------------------------------|
 | [Get pipeline configuration](./endpoints/pipelines.md#pipeline-config)    | `GET`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
-| [Update pipeline configuration](./endpoints/pipelines.md#pipeline-config) | `PUT`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
+| [Create/Update pipeline configuration](./endpoints/pipelines.md#pipeline-config) | `PUT`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
 
 ---
 
