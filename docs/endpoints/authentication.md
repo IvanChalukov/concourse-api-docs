@@ -1,31 +1,5 @@
 # Authentication Endpoints
 
-<!-- <details>
- <summary><code>POST</code> <code><b>/</b></code> <code>(overwrites all in-memory stub and/or proxy-config)</code></summary>
-
-##### Parameters
-
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | None      |  required | object (JSON or YAML)   | N/A  |
-
-
-##### Responses
-
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `201`         | `text/plain;charset=UTF-8`        | `Configuration created successfully`                                |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
-> | `405`         | `text/html;charset=utf-8`         | None                                                                |
-
-##### Example cURL
-
-> ```javascript
->  curl -X POST -H "Content-Type: application/json" --data @post.json http://localhost:8889/
-> ```
-
-</details>
- -->
 ### Login
 
 <details>
@@ -59,7 +33,7 @@
 
 ```shell
 curl --request POST \
-  --url https://concourse.cf.concourse-dev.concourse-azure.sapcloud.io/sky/issuer/token \
+  --url http://localhost:8080/sky/issuer/token \
   --header 'authorization: Basic Zmx5OlpteDU=' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --data username=<username> \
@@ -95,7 +69,7 @@ curl --request POST \
 
 ```shell
 curl --request GET \
-  --url https://concourse.cf.concourse-dev.concourse-azure.sapcloud.io/sky/logout \
+  --url http://localhost:8080/sky/logout \
   --header 'authorization: Bearer <token>' \
   --header 'content-type: application/x-www-form-urlencoded' \
   --header 'cookie: skymarshal_auth="bearer <access_token>";' \

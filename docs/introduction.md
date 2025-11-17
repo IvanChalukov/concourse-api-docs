@@ -30,7 +30,7 @@ Each table links to detailed documentation for that group.
 | Description                  | Method | Endpoint                      |
 |------------------------------|--------|-------------------------------|
 | [Login](./endpoints/authentication.md#login)   | `POST` | `/sky/issuer/token`         |
-| [Logout](./endpoints/authentication.md#logout) | `POST` | `/sky/logout`               | 
+| [Logout](./endpoints/authentication.md#logout) | `GET` | `/sky/logout`               | 
 ---
 
 ### Pipeline config
