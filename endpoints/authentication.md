@@ -49,11 +49,11 @@
 
 ##### Responses
 
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `201`         | `text/plain;charset=UTF-8`        | `Configuration created successfully`                                |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
-> | `405`         | `text/html;charset=utf-8`         | None                                                                |
+| HTTP Code | Content-Type                | Response                                                                                                   |
+|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
+| `200`     | `application/json`          | `{ "access_token": "<access_token>", "token_type": "bearer", "expires_in": <expires_in>, "id_token": "<id_token>" }` |
+| `401`     | `application/json`          | `{ "error": "access_denied", "error_description": "Invalid username or password" }`                        |
+| `500`     | `text/html;charset=utf-8`   | None                                                                                                       |
 
 ##### Example cURL
 
@@ -73,4 +73,31 @@ curl --request POST \
 ### Logout
 <details>
  <summary><code>GET</code> <code><b>/sky/logout</b></code> <code>(revokes the current token)</code></summary>
+
+##### Headers
+> | name           |  type     | data type               | description                                                           |
+> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Content-Type   |  required | string                  | Must be set to `application/x-www-form-urlencoded`                        |
+> | Cookie         |  required | string                  | Must include the `skymarshal_auth` cookie with the access token                 |
+
 ##### Parameters
+> None
+
+##### Responses
+| HTTP Code  | Content-Type                | Response |
+|-----------|-----------------------------|----------|
+| `200`     | `application/json`          | ` ` |
+| `401`     | `application/json`          | ` ` |
+| `500`     | `application/json`   | None     |
+
+##### Example cURL
+
+```shell
+curl --request GET \
+  --url https://concourse.cf.concourse-dev.concourse-azure.sapcloud.io/sky/logout \
+  --header 'authorization: Bearer <token>' \
+  --header 'content-type: application/x-www-form-urlencoded' \
+  --header 'cookie: skymarshal_auth="bearer <access_token>";' \
+  --cookie 'skymarshal_auth="bearer <access_token>";'
+```
