@@ -26,6 +26,11 @@ Below you’ll find categorized tables listing all primary Concourse API endpoin
 Each table links to detailed documentation for that group.
 
 
+### Login/Logout
+| Description                  | Method | Endpoint                      |
+|------------------------------|--------|-------------------------------|
+| [Login](./endpoints/authentication.md#login)   | `POST` | `/sky/issuer/token`         |
+| [Logout](./endpoints/authentication.md#logout) | `POST` | `/sky/logout`               | 
 ---
 
 ### Pipeline config
