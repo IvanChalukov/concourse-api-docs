@@ -1,7 +1,7 @@
 # Builds
 
 ### List builds
-<details>
+<details open>
     <summary><code>GET</code> <code><b>/builds</b></code> <code>(lists all builds across all teams and pipelines)</code></summary>
 
 ##### Headers
@@ -66,7 +66,7 @@ curl --request GET \
 
 ### Get build details
 
-<details>
+<details open>
     <summary><code>GET</code> <code><b>/builds/{build_id}</b></code> <code>(retrieves details of a specific build)</code></summary>
 
 ##### Headers
@@ -121,7 +121,7 @@ curl --request GET \
 
 ### Get build plan
 
-<details>
+<details open>
     <summary><code>GET</code> <code><b>/builds/{build_id}/plan</b></code> <code>(retrieves the build plan for a specific build)</code></summary>
 
 ##### Headers
@@ -161,7 +161,7 @@ curl --request GET \
 
 ### Stream build events
 
-<details>
+<details open>
     <summary><code>GET</code> <code><b>/builds/{build_id}/events</b></code> <code>(streams build events for a specific build)</code></summary>
 
 ##### Headers
@@ -235,7 +235,7 @@ curl --request GET \
 
 ### Get build resources
 
-<details>
+<details open>
     <summary onclick="this.open = !this.open" style="cursor:pointer;"><code>GET</code> <code><b>/builds/{build_id}/resources</b></code> <code>(retrieves resources associated with a specific build)</code></summary>
 
 ##### Headers
@@ -289,7 +289,7 @@ curl --request GET \
 
 ### Abort build
 
-<details>
+<details open>
     <summary><code>PUT</code> <code><b>/builds/{build_id}/abort</b></code> <code>(aborts a specific build)</code></summary>
 
 ##### Headers
@@ -317,7 +317,7 @@ curl --request PUT \
 
 ### Get build preparation status
 
-<details>
+<details open>
     <summary><code>GET</code> <code><b>/builds/{build_id}/preparation</b></code> <code>(retrieves the preparation status of a specific build)</code></summary>
 
 ##### Headers
@@ -360,7 +360,7 @@ curl --request GET \
 
 ### Get build artifacts
 
-<details>
+<details open>
     <summary><code>GET</code> <code><b>/builds/{build_id}/artifacts</b></code> <code>(lists artifacts produced by a specific build)</code></summary>
 
 ##### Headers
@@ -402,7 +402,7 @@ curl --request GET \
 
 ### Add comment to build
 
-<details>
+<details open>
     <summary><code>PUT</code> <code><b>/builds/{build_id}/comment</b></code> <code>(adds a comment to a specific build)</code></summary>
 
 ##### Headers
