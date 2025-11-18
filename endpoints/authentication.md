@@ -11,7 +11,7 @@
 > | Authorization  |  required | string                  | Basic auth header with client credentials (Base64 encoded)               |
 > | Content-Type   |  required | string                  | Must be set to `application/x-www-form-urlencoded`                        |
 
-##### Parameters
+##### Body Parameters
 
 > | name      |  type     | data type               | description                                                           |
 > |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
