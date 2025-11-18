@@ -62,6 +62,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Get build details
 
@@ -116,6 +117,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Get build plan
 
@@ -155,6 +157,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Stream build events
 
@@ -228,6 +231,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Get build resources
 
@@ -281,6 +285,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Abort build
 
@@ -308,6 +313,7 @@ curl --request PUT \
 ```
 </details>
 
+---
 
 ### Get build preparation status
 
@@ -350,6 +356,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Get build artifacts
 
@@ -391,6 +398,7 @@ curl --request GET \
 ```
 </details>
 
+---
 
 ### Add comment to build
 
@@ -427,3 +435,4 @@ curl --request PUT \
   "comment": "test-api"
 }'
 ```
+</details>
