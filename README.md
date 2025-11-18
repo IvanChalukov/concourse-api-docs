@@ -46,15 +46,15 @@ Each table links to detailed documentation for that group.
 
 | Description                      | Method | Endpoint                                      |
 |----------------------------------|--------|-----------------------------------------------|
-| [List all builds](./endpoints/builds.md) | `GET`  | `/api/v1/builds`                              |
-| [Get build details](./endpoints/builds.md#build-details) | `GET`  | `/api/v1/builds/:build_id`                    |
-| [Get build plan](./endpoints/builds.md#build-plan) | `GET`  | `/api/v1/builds/:build_id/plan`               |
-| [Stream build events](./endpoints/builds.md#build-events) | `GET`  | `/api/v1/builds/:build_id/events`             |
-| [Get build resources](./endpoints/builds.md#build-resources) | `GET`  | `/api/v1/builds/:build_id/resources`          |
+| [List all builds](./endpoints/builds.md#list-builds) | `GET`  | `/api/v1/builds`                              |
+| [Get build details](./endpoints/builds.md#get-build-details) | `GET`  | `/api/v1/builds/:build_id`                    |
+| [Get build plan](./endpoints/builds.md#get-build-plan) | `GET`  | `/api/v1/builds/:build_id/plan`               |
+| [Stream build events](./endpoints/builds.md#stream-build-events) | `GET`  | `/api/v1/builds/:build_id/events`             |
+| [Get build resources](./endpoints/builds.md#get-build-resources) | `GET`  | `/api/v1/builds/:build_id/resources`          |
 | [Abort a build](./endpoints/builds.md#abort-build) | `PUT`  | `/api/v1/builds/:build_id/abort`              |
-| [Get build preparation status](./endpoints/builds.md#build-preparation) | `GET`  | `/api/v1/builds/:build_id/preparation`        |
-| [List build artifacts](./endpoints/builds.md#build-artifacts) | `GET`  | `/api/v1/builds/:build_id/artifacts`          |
-| [Add comment to build](./endpoints/builds.md#build-comment) | `PUT`  | `/api/v1/builds/:build_id/comment`            |
+| [Get build preparation status](./endpoints/builds.md#get-build-preparation-status) | `GET`  | `/api/v1/builds/:build_id/preparation`        |
+| [List build artifacts](./endpoints/builds.md#get-build-artifacts) | `GET`  | `/api/v1/builds/:build_id/artifacts`          |
+| [Add comment to build](./endpoints/builds.md#add-comment-to-build) | `PUT`  | `/api/v1/builds/:build_id/comment`            |
 
 ---
 
