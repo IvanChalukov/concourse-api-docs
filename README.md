@@ -227,9 +227,9 @@ Each table links to detailed documentation for that group.
 
 | Description | Method | Endpoint |
 |-------------|--------|----------|
-| [Get wall message](./endpoints/wall.md#get-wall) | `GET` | `/api/v1/wall` |
-| [Set wall message](./endpoints/wall.md#set-wall) | `PUT` | `/api/v1/wall` |
-| [Clear wall message](./endpoints/wall.md#clear-wall) | `DELETE` | `/api/v1/wall` |
+| [Get wall message](./endpoints/wall.md#get-wall-message) | `GET` | `/api/v1/wall` |
+| [Set wall message](./endpoints/wall.md#set-wall-message) | `PUT` | `/api/v1/wall` |
+| [Clear wall message](./endpoints/wall.md#clear-wall-message) | `DELETE` | `/api/v1/wall` |
 
 ---
 
@@ -237,8 +237,8 @@ Each table links to detailed documentation for that group.
 
 | Description | Method | Endpoint |
 |-------------|--------|----------|
-| [Get OpenID Connect configuration](./endpoints/well-known.md#get-openid-configuration) | `GET` | `/.well-known/openid-configuration` |
-| [Get signing keys (JWKS)](./endpoints/well-known.md#get-signing-keys) | `GET` | `/.well-known/jwks.json` |
+| [Get OpenID Connect configuration](./endpoints/well-known.md#get-openid-connect-configuration) | `GET` | `/.well-known/openid-configuration` |
+| [Get signing keys (JWKS)](./endpoints/well-known.md#get-json-web-key-set) | `GET` | `/.well-known/jwks.json` |
 
 ---
 

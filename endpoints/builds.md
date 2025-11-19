@@ -429,7 +429,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/builds/301596/comment \
-  --header 'authorization: Bearer JQ1kjCoXQMyPlhieYQl/efPVFXI+vRxpAAAAAA' \
+  --header 'authorization: Bearer <token>' \
   --header 'content-type: application/json' \
   --data '{
   "comment": "test-api"
