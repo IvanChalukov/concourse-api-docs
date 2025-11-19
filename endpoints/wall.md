@@ -107,3 +107,5 @@ curl --request DELETE \
   --header 'authorization: bearer <token>'
 ```
 </details>
+
+---

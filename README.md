@@ -205,21 +205,21 @@ Each table links to detailed documentation for that group.
 
 | Description | Method | Endpoint |
 |-------------|--------|----------|
-| [List all teams](./endpoints/teams.md#list-teams) | `GET` | `/api/v1/teams` |
-| [Get team details](./endpoints/teams.md#get-team) | `GET` | `/api/v1/teams/:team_name` |
-| [Set team configuration](./endpoints/teams.md#set-team) | `PUT` | `/api/v1/teams/:team_name` |
-| [Rename a team](./endpoints/teams.md#rename-team) | `PUT` | `/api/v1/teams/:team_name/rename` |
-| [Delete a team](./endpoints/teams.md#delete-team) | `DELETE` | `/api/v1/teams/:team_name` |
-| [List builds for a team](./endpoints/teams.md#list-team-builds) | `GET` | `/api/v1/teams/:team_name/builds` |
-| [Create a build for a team](./endpoints/teams.md#create-team-build) | `POST` | `/api/v1/teams/:team_name/builds` |
+| [List all teams](./endpoints/teams.md#list-all-teams) | `GET` | `/api/v1/teams` |
+| [Get team details](./endpoints/teams.md#get-team-details) | `GET` | `/api/v1/teams/:team_name` |
+| [Set team configuration](./endpoints/teams.md#set-team-configuration) | `PUT` | `/api/v1/teams/:team_name` |
+| [Rename a team](./endpoints/teams.md#rename-a-team) | `PUT` | `/api/v1/teams/:team_name/rename` |
+| [Delete a team](./endpoints/teams.md#delete-a-team) | `DELETE` | `/api/v1/teams/:team_name` |
+| [List builds for a team](./endpoints/teams.md#list-builds-for-a-team) | `GET` | `/api/v1/teams/:team_name/builds` |
+| [Create a build for a team](./endpoints/teams.md#create-a-build-for-a-team) | `POST` | `/api/v1/teams/:team_name/builds` |
 
 ---
 
 ### Artifacts
 | Description            | Method | Endpoint                                               |
 |------------------------|--------|--------------------------------------------------------|
-| [Create an artifact](./endpoints/artifacts.md#create-artifact) | `POST` | `/api/v1/teams/:team_name/artifacts`                  |
-| [Get artifact details](./endpoints/artifacts.md#get-artifact)  | `GET`  | `/api/v1/teams/:team_name/artifacts/:artifact_id`     |
+| [Create an artifact](./endpoints/artifacts.md#create-an-artifact) | `POST` | `/api/v1/teams/:team_name/artifacts`                  |
+| [Get artifact details](./endpoints/artifacts.md#get-artifact-details)  | `GET`  | `/api/v1/teams/:team_name/artifacts/:artifact_id`     |
 
 ---
 
