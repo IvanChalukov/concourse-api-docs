@@ -2,7 +2,7 @@
 
 ### List builds
 <details open>
-    <summary><code>GET</code> <code><b>/builds</b></code> <code>(lists all builds across all teams and pipelines)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds</b></code> <code>(lists all builds across all teams and pipelines)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -23,7 +23,7 @@
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `401`     | `application/json` | not authorized                           |
+| `401`     | text/plain; charset=utf-8 | not authorized                           |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -67,7 +67,7 @@ curl --request GET \
 ### Get build details
 
 <details open>
-    <summary><code>GET</code> <code><b>/builds/{build_id}</b></code> <code>(retrieves details of a specific build)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}</b></code> <code>(retrieves details of a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -78,8 +78,8 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `401`     | `application/json` | not authorized                           |
-| `404`     | `application/json` | build not found                           |
+| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| `404`     | text/plain; charset=utf-8 | build not found                           |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -112,7 +112,7 @@ curl --request GET \
 
 ```shell
 curl --request GET \
-  --url https://concourse.cf.concourse-dev.concourse-azure.sapcloud.io/api/v1/builds/298719 \
+  --url http://localhost:8080/api/v1/builds/298719 \
   --header 'authorization: Bearer <token>' 
 ```
 </details>
@@ -122,7 +122,7 @@ curl --request GET \
 ### Get build plan
 
 <details open>
-    <summary><code>GET</code> <code><b>/builds/{build_id}/plan</b></code> <code>(retrieves the build plan for a specific build)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}/plan</b></code> <code>(retrieves the build plan for a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -133,8 +133,8 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `401`     | `application/json` | not authorized                           |
-| `404`     | `application/json` | build not found                           |
+| `401`     | text/plain; charset=utf-8 | not authorized                  |
+| `404`     | text/plain; charset=utf-8 | build not found                  |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -162,7 +162,7 @@ curl --request GET \
 ### Stream build events
 
 <details open>
-    <summary><code>GET</code> <code><b>/builds/{build_id}/events</b></code> <code>(streams build events for a specific build)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}/events</b></code> <code>(streams build events for a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -173,8 +173,8 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `text/event-stream` | See ES(event-stream) example below - in text/event-stream; charset=utf-8 |
-| `401`     | `application/json` | not authorized                           |
-| `404`     | `application/json` | build not found                           |
+| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| `404`     | text/plain; charset=utf-8 | build not found                           |
 
 <details>
 <summary>Event Stream Example for 200 Response</summary>
@@ -236,7 +236,7 @@ curl --request GET \
 ### Get build resources
 
 <details open>
-    <summary onclick="this.open = !this.open" style="cursor:pointer;"><code>GET</code> <code><b>/builds/{build_id}/resources</b></code> <code>(retrieves resources associated with a specific build)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}/resources</b></code> <code>(retrieves resources associated with a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -247,8 +247,8 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `401`     | `application/json` | not authorized                           |
-| `404`     | `application/json` | build not found                           |
+| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| `404`     | text/plain; charset=utf-8 | build not found                           |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -290,7 +290,7 @@ curl --request GET \
 ### Abort build
 
 <details open>
-    <summary><code>PUT</code> <code><b>/builds/{build_id}/abort</b></code> <code>(aborts a specific build)</code></summary>
+    <summary><code>PUT</code> <code><b>/api/v1/builds/{build_id}/abort</b></code> <code>(aborts a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -301,8 +301,8 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:---------------------------------|
 | `204`     | `application/json` | None                            |
-| `401`     | `application/json` | not authorized                  |
-| `404`     | `application/json` | build not found                 |
+| `401`     | text/plain; charset=utf-8 | not authorized                  |
+| `404`     | text/plain; charset=utf-8 | build not found                 |
 
 
 ##### Example cURL
@@ -318,7 +318,7 @@ curl --request PUT \
 ### Get build preparation status
 
 <details open>
-    <summary><code>GET</code> <code><b>/builds/{build_id}/preparation</b></code> <code>(retrieves the preparation status of a specific build)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}/preparation</b></code> <code>(retrieves the preparation status of a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -329,8 +329,8 @@ curl --request PUT \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `401`     | `application/json` | not authorized                  |
-| `404`     | `application/json` | build not found                 |
+| `401`     | text/plain; charset=utf-8  | not authorized                  |
+| `404`     | text/plain; charset=utf-8  | build not found                 |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -361,7 +361,7 @@ curl --request GET \
 ### Get build artifacts
 
 <details open>
-    <summary><code>GET</code> <code><b>/builds/{build_id}/artifacts</b></code> <code>(lists artifacts produced by a specific build)</code></summary>
+    <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}/artifacts</b></code> <code>(lists artifacts produced by a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -372,8 +372,8 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `401`     | `application/json` | not authorized                  |
-| `404`     | `application/json` | build not found                 |
+| `401`     | text/plain; charset=utf-8  | not authorized                  |
+| `404`     | text/plain; charset=utf-8  | build not found                 |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -403,7 +403,7 @@ curl --request GET \
 ### Add comment to build
 
 <details open>
-    <summary><code>PUT</code> <code><b>/builds/{build_id}/comment</b></code> <code>(adds a comment to a specific build)</code></summary>
+    <summary><code>PUT</code> <code><b>/api/v1/builds/{build_id}/comment</b></code> <code>(adds a comment to a specific build)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -422,8 +422,10 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:---------------------------------|
 | `200`     | `application/json` | None                            |
-| `401`     | `application/json` | not authorized                  |
-| `404`     | `application/json` | build not found                 |    
+| `400`     | text/plain; charset=utf-8 | Wall message cannot be empty |
+| `401`     | text/plain; charset=utf-8 | not authorized               |
+| `404`     | text/plain; charset=utf-8 | build not found              |    
+
 
 ##### Example cURL
 ```shell

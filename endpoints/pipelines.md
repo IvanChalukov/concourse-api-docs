@@ -4,7 +4,7 @@
 
 #### Get pipeline configuration
 <details open>
- <summary><code>GET</code> <code><b>/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(retrieves the configuration of a pipeline)</code></summary>
+ <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(retrieves the configuration of a pipeline)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -16,9 +16,9 @@
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | See JSON example below          |
-| `404`     | `application/json` | None                           |
-| `401`     | `application/json` | not authorized                           |
-| `500`     | `application/json` | None                           |
+| `404`     | text/plain; charset=utf-8 | None                           |
+| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| `500`     | text/plain; charset=utf-8 | None                           |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -49,7 +49,7 @@ curl --request GET \
 
 #### Create/Update pipeline configuration
 <details open>
- <summary><code>PUT</code> <code><b>/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(create/updates the configuration of a pipeline)</code></summary>
+ <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(create/updates the configuration of a pipeline)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
@@ -85,8 +85,8 @@ curl --request GET \
 |:---------:|:------------------|:-------------------------------|
 | `200`     | `application/json` | None          |
 | `201`     | `application/json` | None          |
-| `401`     | `application/json` | not authorized                           |
-| `500`     | `application/json` | error message                           |
+| `401`     | text/plain; charset=utf-8  | not authorized                           |
+| `500`     | text/plain; charset=utf-8  | error message                           |
 
 ##### Example cURL
 ```shell
