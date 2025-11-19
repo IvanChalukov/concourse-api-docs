@@ -2,7 +2,7 @@
 
 ### Login
 
-<details>
+<details open>
  <summary><code>POST</code> <code><b>/sky/issuer/token</b></code> <code>(issues a new token)</code></summary>
 
 ##### Headers
@@ -45,7 +45,8 @@ curl --request POST \
 </details>
 
 ### Logout
-<details>
+
+<details open>
  <summary><code>GET</code> <code><b>/sky/logout</b></code> <code>(revokes the current token)</code></summary>
 
 ##### Headers

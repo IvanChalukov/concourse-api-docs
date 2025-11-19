@@ -3,7 +3,7 @@
 ### Pipeline config
 
 #### Get pipeline configuration
-<details>
+<details open>
  <summary><code>GET</code> <code><b>/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(retrieves the configuration of a pipeline)</code></summary>
 
 ##### Headers
@@ -48,7 +48,7 @@ curl --request GET \
 </details>
 
 #### Create/Update pipeline configuration
-<details>
+<details open>
  <summary><code>PUT</code> <code><b>/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(create/updates the configuration of a pipeline)</code></summary>
 
 ##### Headers
