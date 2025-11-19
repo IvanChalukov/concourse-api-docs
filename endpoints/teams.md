@@ -22,19 +22,19 @@
 
 ```json
 [
-    {
-        "id": 1,
-        "name": "main",
-        "auth": {
-        "owner": {
-            "groups": [],
-            "users": [
+  {
+    "id": 1,
+    "name": "main",
+    "auth": {
+      "owner": {
+          "groups": [],
+          "users": [
             "oidc:john",
             "local:test"
-            ]
-        }
-        }
+          ]
+      }
     }
+  }
 ]
 
 ```

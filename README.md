@@ -62,19 +62,19 @@ Each table links to detailed documentation for that group.
 
 | Description                                   | Method | Endpoint                                      |
 |-----------------------------------------------|--------|-----------------------------------------------|
-| [List all jobs](./endpoints/jobs.md) | `GET` | `/api/v1/jobs` |
-| [List jobs in a pipeline](./endpoints/jobs.md#jobs-in-pipeline) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs` |
-| [Get job details](./endpoints/jobs.md#job-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name` |
-| [List builds for a job](./endpoints/jobs.md#job-builds) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` |
-| [Trigger a job build](./endpoints/jobs.md#trigger-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` |
-| [Rerun a build](./endpoints/jobs.md#rerun-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` |
-| [Get job inputs](./endpoints/jobs.md#job-inputs) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/inputs` |
-| [Get specific build for a job](./endpoints/jobs.md#specific-build) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` |
-| [Pause a job](./endpoints/jobs.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/pause` |
-| [Unpause a job](./endpoints/jobs.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/unpause` |
-| [Enable/disable job scheduling](./endpoints/jobs.md#enable-disable-scheduling) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/schedule` |
-| [Get job status badge (SVG)](./endpoints/jobs.md#job-badge) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/badge` |
-| [Get job status badge (SVG, no team)](./endpoints/jobs.md#job-badge) | `GET` | `/api/v1/pipelines/:pipeline_name/jobs/:job_name/badge` |
+| [List all jobs](./endpoints/jobs.md#list-all-jobs) | `GET` | `/api/v1/jobs` |
+| [List jobs in a pipeline](./endpoints/jobs.md#list-jobs-in-a-pipeline) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs` |
+| [Get job details](./endpoints/jobs.md#get-job-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name` |
+| [List builds for a job](./endpoints/jobs.md#list-builds-for-a-job) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` |
+| [Trigger a job build](./endpoints/jobs.md#trigger-a-job-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds` |
+| [Rerun a build](./endpoints/jobs.md#rerun-a-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` |
+| [Get job inputs](./endpoints/jobs.md#get-job-inputs) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/inputs` |
+| [Get specific build for a job](./endpoints/jobs.md#get-specific-build-for-a-job) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/builds/:build_name` |
+| [Pause a job](./endpoints/jobs.md#pause-a-job) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/pause` |
+| [Unpause a job](./endpoints/jobs.md#unpause-a-job) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/unpause` |
+| [Trigger scheduling for job](./endpoints/jobs.md#trigger-scheduling-for-job) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/schedule` |
+| [Get job status badge (SVG)](./endpoints/jobs.md#get-job-status-badge) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/badge` |
+| [Get job status badge (SVG, main team)](./endpoints/jobs.md#get-job-status-badge-main-team) | `GET` | `/api/v1/pipelines/:pipeline_name/jobs/:job_name/badge` |
 | [Clear task cache](./endpoints/jobs.md#clear-task-cache) | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/jobs/:job_name/tasks/:step_name/cache` |
 ---
 

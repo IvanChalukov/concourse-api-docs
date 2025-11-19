@@ -17,7 +17,6 @@
 > | to        |  optional | integer                 | Return builds with ID greater than this value (for pagination)        |
 > | timestamps |  optional | boolean                 | If true, `from` and `to` are treated as timestamps instead of IDs (default: false)  |
 
-> None
 
 ##### Responses
 | HTTP Code | Content-Type       | Response Example                |
