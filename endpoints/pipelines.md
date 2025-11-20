@@ -5,18 +5,19 @@
  <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(retrieves the configuration of a pipeline)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                                 |
+|---------------|----------|-----------|---------------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token    |
 
 ##### Responses
 
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | See JSON example below          |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
-| `500`     | text/plain; charset=utf-8 | None                           |
+| HTTP Code | Content-Type                | Response Example          |
+|:---------:|:----------------------------|:--------------------------|
+| `200`     | `application/json`          | See JSON example below    |
+| `404`     | `text/plain; charset=utf-8` | None                      |
+| `401`     | `text/plain; charset=utf-8` | not authorized            |
+| `500`     | `text/plain; charset=utf-8` | error message             |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -51,11 +52,12 @@ curl --request GET \
  <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/config</b></code> <code>(create/updates the configuration of a pipeline)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
-> | Content-Type   |  required | string                  | Must be set to `application/json`                                     |
-> | X-Concourse-Config-Version |  optional | integer         | The version of the pipeline configuration being submitted. If provided, the update will only succeed if the current version matches this value. This helps prevent conflicting updates. |
+
+| name                        | type     | data type | description                                                                                                                                           |
+|-----------------------------|----------|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Authorization               | required | string    | Bearer auth header with the access token                                                                                                              |
+| Content-Type                | required | string    | Must be set to `application/json`                                                                                                                     |
+| X-Concourse-Config-Version  | optional | integer   | The version of the pipeline configuration being submitted. If provided, the update will only succeed if the current version matches this value. This helps prevent conflicting updates. |
 
 
 
@@ -80,12 +82,12 @@ curl --request GET \
 
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None          |
-| `201`     | `application/json` | None          |
-| `401`     | text/plain; charset=utf-8  | not authorized                           |
-| `500`     | text/plain; charset=utf-8  | error message                           |
+| HTTP Code | Content-Type                | Response Example  |
+|:---------:|:---------------------------|:-------------------|
+| `200`     | `application/json`          | None              |
+| `201`     | `application/json`          | None              |
+| `401`     | `text/plain; charset=utf-8` | not authorized    |
+| `500`     | `text/plain; charset=utf-8` | error message     |
 
 ##### Example cURL
 ```shell
@@ -133,16 +135,17 @@ curl --request PUT \
  <summary><code>GET</code> <code><b>/api/v1/pipelines</b></code> <code>(lists all pipelines across all teams)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|------------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | See JSON example below          |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example        |
+|:---------:|:---------------------------|:-------------------------|
+| `200`     | `application/json`          | See JSON example below  |
+| `404`     | `text/plain; charset=utf-8` | None                    |
+| `401`     | `text/plain; charset=utf-8` | not authorized          |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -182,14 +185,14 @@ curl --request GET \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              | 
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | See JSON example below          |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example        |
+|:---------:|:---------------------------|:-------------------------|
+| `200`     | `application/json`          | See JSON example below  |
+| `404`     | `text/plain; charset=utf-8` | None                    |
+| `401`     | `text/plain; charset=utf-8` | not authorized          |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -228,16 +231,16 @@ curl --request GET \
  <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}</b></code> <code>(retrieves details of a specific pipeline)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | name           |  type     | data type               | description                              |
+> |----------------|-----------|-------------------------|------------------------------------------|
+> | Authorization  |  required | string                  | Bearer auth header with the access token |           
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | See JSON example below          |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example        |
+|:---------:|:----------------------------|:------------------------|
+| `200`     | `application/json`          | See JSON example below  |
+| `404`     | `text/plain; charset=utf-8` | None                    |
+| `401`     | `text/plain; charset=utf-8` | not authorized          |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -273,16 +276,16 @@ curl --request GET \
  <summary><code>DELETE</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}</b></code> <code>(deletes a specific pipeline)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | name           |  type     | data type               | description                               |
+> |----------------|-----------|-------------------------|-------------------------------------------|
+> | Authorization  |  required | string                  | Bearer auth header with the access token. |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `204`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example       |
+|:---------:|:----------------------------|:-----------------------|
+| `204`     | `application/json`          | None                   |
+| `404`     | `text/plain; charset=utf-8` | None                   |
+| `401`     | `text/plain; charset=utf-8` | not authorized         |
 
 ##### Example cURL
 ```shell
@@ -294,7 +297,7 @@ curl --request DELETE \
 </details>
 ---
 
-### Order pipelines
+### Set pipeline ordering for a team
 
 <details open>
  <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/ordering</b></code> <code>(sets the order of pipelines for a team)</code></summary>
@@ -302,7 +305,7 @@ curl --request DELETE \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |                 
 
 ##### Request Body
 
@@ -316,11 +319,11 @@ curl --request DELETE \
 ```
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example  |
+|:---------:|:----------------------------|:------------------|
+| `200`     | `application/json`          | None              |
+| `404`     | `text/plain; charset=utf-8` | None              |
+| `401`     | `text/plain; charset=utf-8` | not authorized    |
 
 ##### Example cURL
 ```shell
@@ -339,7 +342,7 @@ curl --request PUT \
 </details>
 --- 
 
-### Order pipelines within a group ???
+### Set pipeline ordering within a group
 
 <details open>
  <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/ordering</b></code> <code>(sets the order of jobs within a pipeline group)</code></summary>
@@ -347,7 +350,7 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Request Body
 
@@ -369,11 +372,11 @@ curl --request PUT \
 ```
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example       |
+|:---------:|:----------------------------|:-----------------------|
+| `200`     | `application/json`          | None                   |
+| `404`     | `text/plain; charset=utf-8` | None                   |
+| `401`     | `text/plain; charset=utf-8` | not authorized         |
 
 ##### Example cURL
 ```shell
@@ -407,45 +410,19 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `application/json`          | None             |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
 
 ##### Example cURL
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/pause \
-  --header 'authorization: Bearer <token>'
-```
-
-</details>
----
-
-### Unpause a pipeline
-<details open>
- <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/unpause</b></code> <code>(unpauses a specific pipeline)</code></summary>
-
-##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
-
-##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
-
-##### Example cURL
-```shell
-curl --request PUT \
-  --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/unpause \
   --header 'authorization: Bearer <token>'
 ```
 
@@ -460,19 +437,45 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           | 
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `application/json`          | None             |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
 
 ##### Example cURL
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/archive \
+  --header 'authorization: Bearer <token>'
+```
+
+</details>
+---
+
+### Unpause a pipeline
+<details open>
+ <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/unpause</b></code> <code>(unpauses a specific pipeline)</code></summary>
+
+##### Headers
+> | name           |  type     | data type               | description                                                           |
+> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
+
+##### Responses
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `application/json`          | None             |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
+
+##### Example cURL
+```shell
+curl --request PUT \
+  --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/unpause \
   --header 'authorization: Bearer <token>'
 ```
 
@@ -486,14 +489,14 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                             |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `application/json`          | None             |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
 
 ##### Example cURL
 ```shell
@@ -512,14 +515,14 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `application/json`          | None             |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
 
 ##### Example cURL
 ```shell
@@ -538,14 +541,14 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | See JSON example below         |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example       |
+|:---------:|:----------------------------|:-----------------------|
+| `200`     | `application/json`          | See JSON example below |
+| `404`     | `text/plain; charset=utf-8` | None                   |
+| `401`     | `text/plain; charset=utf-8` | not authorized         |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -584,7 +587,7 @@ curl --request GET \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token |
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Body
 ```json
@@ -594,12 +597,12 @@ curl --request GET \
 ```
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | None                           |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |  
-| `500`     | text/plain; charset=utf-8 | None                       |
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `application/json`          | None             |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
+| `500`     | `text/plain; charset=utf-8` | None             |
 
 ##### Example cURL
 ```shell
@@ -622,14 +625,14 @@ curl --request PUT \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `application/json` | See JSON example below         |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
+| HTTP Code | Content-Type                | Response Example       |
+|:---------:|:----------------------------|:-----------------------|
+| `200`     | `application/json`          | See JSON example below |
+| `404`     | `text/plain; charset=utf-8` | None                   |
+| `401`     | `text/plain; charset=utf-8` | not authorized         |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -669,7 +672,7 @@ curl --request GET \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Body
 ```json
@@ -679,12 +682,12 @@ curl --request GET \
 ```
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `201`     | `application/json` | See JSON example below         |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |
-| `500`     | text/plain; charset=utf-8 | None                       |
+| HTTP Code | Content-Type                | Response Example       |
+|:---------:|:----------------------------|:-----------------------|
+| `201`     | `application/json`          | See JSON example below |
+| `404`     | `text/plain; charset=utf-8` | None                   |
+| `401`     | `text/plain; charset=utf-8` | not authorized         |
+| `500`     | `text/plain; charset=utf-8` | None                   |
 
 ##### Example cURL
 ```shell
@@ -707,14 +710,14 @@ curl --request POST \
 ##### Headers
 > | name           |  type     | data type               | description                                                           |
 > |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+> | Authorization  |  required | string                  | Bearer auth header with the access token                              |
 
 ##### Responses
-| HTTP Code | Content-Type       | Response Example                |
-|:---------:|:------------------|:-------------------------------|
-| `200`     | `image/svg+xml`    | SVG content                    |
-| `404`     | text/plain; charset=utf-8 | None                           |
-| `401`     | text/plain; charset=utf-8 | not authorized                           |  
+| HTTP Code | Content-Type                | Response Example |
+|:---------:|:----------------------------|:-----------------|
+| `200`     | `image/svg+xml`             | SVG content      |
+| `404`     | `text/plain; charset=utf-8` | None             |
+| `401`     | `text/plain; charset=utf-8` | not authorized   |
 
 ##### Example cURL
 ```shell

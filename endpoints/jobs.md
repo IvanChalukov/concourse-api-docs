@@ -5,15 +5,17 @@
     <summary><code>GET</code> <code><b>/api/v1/jobs</b></code> <code>(lists all jobs)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|------------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized                                      |
+
+| HTTP Code | Content-Type              | Response                   |
+|-----------|---------------------------|----------------------------|
+| `200`     | `application/json`        | See JSON example below     |
+| `401`     | text/plain; charset=utf-8 | not authorized             |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -65,11 +67,13 @@
 </details>
 
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/jobs \
     --header 'authorization: Bearer <token>' 
 ```
+
 </details>
 
 
@@ -78,15 +82,17 @@ curl --request GET \
     <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs</b></code> <code>(lists jobs in a specific pipeline)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|------------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized                                                                                             |
+
+| HTTP Code | Content-Type              | Response               |
+|-----------|---------------------------|------------------------|
+| `200`     | `application/json`        | See JSON example below |
+| `401`     | text/plain; charset=utf-8 | not authorized         |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -138,11 +144,13 @@ curl --request GET \
 </details>
 
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs \
     --header 'authorization: Bearer <token>' 
 ```
+
 </details>
 
 ### Get job details
@@ -150,16 +158,18 @@ curl --request GET \
     <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}</b></code> <code>(retrieves details of a specific job in a pipeline)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|------------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized                                                                                             |
-| `404`     | text/plain; charset=utf-8   | job not found                                                                                             |
+
+| HTTP Code | Content-Type              | Response               |
+|-----------|---------------------------|------------------------|
+| `200`     | `application/json`        | See JSON example below |
+| `401`     | text/plain; charset=utf-8 | not authorized         |
+| `404`     | text/plain; charset=utf-8 | job not found          |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -203,6 +213,7 @@ curl --request GET \
 </details>
 
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job \
@@ -218,26 +229,28 @@ curl --request GET \
     <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/builds</b></code> <code>(lists builds for a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|------------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 
 ##### Query Parameters
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | limit     |  optional | integer                 | Maximum number of builds to return (default: 100)          |
-> | from      |  optional | integer                 | Return builds with ID less than this value (for pagination)           |
-> | to        |  optional | integer                 | Return builds with ID greater than this value (for pagination)        |
-> | timestamps |  optional | boolean                 | If true, `from` and `to` are treated as timestamps instead of IDs (default: false)  |
 
+| name       | type     | data type | description                                                                         |
+|------------|----------|-----------|-------------------------------------------------------------------------------------|
+| limit      | optional | integer   | Maximum number of builds to return (default: 100)                                   |
+| from       | optional | integer   | Return builds with ID less than this value (for pagination)                         |
+| to         | optional | integer   | Return builds with ID greater than this value (for pagination)                      |
+| timestamps | optional | boolean   | If true, `from` and `to` are treated as timestamps instead of IDs (default: false) |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response               |
+|-----------|---------------------------|------------------------|
+| `200`     | `application/json`        | See JSON example below |
+| `401`     | text/plain; charset=utf-8 | not authorized         |
+| `404`     | text/plain; charset=utf-8 | None                   |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -293,16 +306,18 @@ curl --request GET \
     <summary><code>POST</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/builds</b></code> <code>(triggers a new build for a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response                   |
+|-----------|---------------------------|----------------------------|
+| `200`     | `application/json`        | See JSON example below     |
+| `401`     | text/plain; charset=utf-8 | not authorized             |
+| `404`     | text/plain; charset=utf-8 | None                       |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -322,6 +337,7 @@ curl --request GET \
 ```
 
 </details>
+
 ##### Example cURL
 
 ```shell
@@ -339,16 +355,18 @@ curl --request POST \
     <summary><code>POST</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/builds/{build_id}</b></code> <code>(reruns a specific build for a job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response                   |
+|-----------|---------------------------|----------------------------|
+| `200`     | `application/json`        | See JSON example below     |
+| `401`     | text/plain; charset=utf-8 | not authorized             |
+| `404`     | text/plain; charset=utf-8 | None                       |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -370,6 +388,7 @@ curl --request POST \
 </details>
 
 ##### Example cURL
+
 ```shell
 curl --request POST \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/builds/303193 \
@@ -386,16 +405,18 @@ curl --request POST \
     <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/inputs</b></code> <code>(retrieves the inputs for a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response                   |
+|-----------|---------------------------|----------------------------|
+| `200`     | `application/json`        | See JSON example below     |
+| `401`     | text/plain; charset=utf-8 | not authorized             |
+| `404`     | text/plain; charset=utf-8 | None                       |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -449,7 +470,9 @@ curl --request POST \
 ```
 
 </details>
+
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/inputs \
@@ -457,6 +480,7 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### Get specific build for a job
@@ -465,16 +489,18 @@ curl --request GET \
     <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/builds/{build_id}</b></code> <code>(retrieves details of a specific build for a job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | See JSON example below  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response                   |
+|-----------|---------------------------|----------------------------|
+| `200`     | `application/json`        | See JSON example below     |
+| `401`     | text/plain; charset=utf-8 | not authorized             |
+| `404`     | text/plain; charset=utf-8 | None                       |
 
 <details>
 <summary>JSON Example for 200 Response</summary>
@@ -498,6 +524,7 @@ curl --request GET \
 </details>
 
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/builds/301596 \
@@ -505,6 +532,7 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### Pause a job
@@ -513,18 +541,21 @@ curl --request GET \
     <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/pause</b></code> <code>(pauses a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | None  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response       |
+|-----------|---------------------------|----------------|
+| `200`     | `application/json`        | None           |
+| `401`     | text/plain; charset=utf-8 | not authorized |
+| `404`     | text/plain; charset=utf-8 | None           |
 
 ##### Example cURL
+
 ```shell
 curl --request PUT \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/pause \
@@ -532,6 +563,7 @@ curl --request PUT \
 ```
 
 </details>
+
 ---
 
 ### Unpause a job
@@ -539,17 +571,21 @@ curl --request PUT \
     <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/unpause</b></code> <code>(unpauses a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `application/json`          | None  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response       |
+|-----------|---------------------------|----------------|
+| `200`     | `application/json`        | None           |
+| `401`     | text/plain; charset=utf-8 | not authorized |
+| `404`     | text/plain; charset=utf-8 | None           |
+
 ##### Example cURL
+
 ```shell
 curl --request PUT \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/unpause \
@@ -557,6 +593,7 @@ curl --request PUT \
 ```
 
 </details>
+
 ---
 
 ### Trigger scheduling for job
@@ -565,18 +602,21 @@ curl --request PUT \
     <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/schedule</b></code> <code>(enables or disables scheduling for a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|          
-| `200`     | `application/json`          | None  |
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response       |
+|-----------|---------------------------|----------------|
+| `200`     | `application/json`        | None           |
+| `401`     | text/plain; charset=utf-8 | not authorized |
+| `404`     | text/plain; charset=utf-8 | None           |
 
 ##### Example cURL
+
 ```shell
 curl --request PUT \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/schedule \
@@ -584,6 +624,7 @@ curl --request PUT \
 ```
 
 </details>
+
 ---
 
 ### Get job status badge
@@ -591,18 +632,21 @@ curl --request PUT \
     <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/badge</b></code> <code>(retrieves the status badge for a specific job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `image/svg+xml`             | SVG badge representing the job status
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response                                |
+|-----------|---------------------------|-----------------------------------------|
+| `200`     | `image/svg+xml`           | SVG badge representing the job status   |
+| `401`     | text/plain; charset=utf-8 | not authorized                          |
+| `404`     | text/plain; charset=utf-8 | None                                    |
 
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/badge \
@@ -610,6 +654,7 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### Get job status badge main team
@@ -618,18 +663,21 @@ curl --request GET \
     <summary><code>GET</code> <code><b>/api/v1/pipelines/{pipeline_name}/jobs/{job_name}/badge</b></code> <code>(retrieves the status badge for a specific job from the main team)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     | `image/svg+xml`             | SVG badge representing the job status
-| `401`     | text/plain; charset=utf-8   | not authorized
-| `404`     | text/plain; charset=utf-8   | None  |
+
+| HTTP Code | Content-Type              | Response                                |
+|-----------|---------------------------|-----------------------------------------|
+| `200`     | `image/svg+xml`           | SVG badge representing the job status   |
+| `401`     | text/plain; charset=utf-8 | not authorized                          |
+| `404`     | text/plain; charset=utf-8 | None                                    |
 
 ##### Example cURL
+
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/pipelines/test/jobs/test-job/badge \
@@ -637,6 +685,7 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### Clear task cache
@@ -645,18 +694,21 @@ curl --request GET \
     <summary><code>DELETE</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/jobs/{job_name}/tasks/{step_name}/cache</b></code> <code>(clears a specific task cache for a job)</code></summary>
 
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Bearer auth header with the access token
+
+| name          | type     | data type | description                              |
+|---------------|----------|-----------|--------------------------------------|
+| Authorization | required | string    | Bearer auth header with the access token |
 
 ##### Responses
-| HTTP Code | Content-Type                | Response                                                                                                   |
-|-----------|-----------------------------|------------------------------------------------------------------------------------------------------------|
-| `200`     |      	application/json    | { "caches_removed":0 }  |
-| `401`     | text/plain; charset=utf-8   | not authorized    |
-| `404`     | text/plain; charset=utf-8   | None   |
+
+| HTTP Code | Content-Type              | Response                |
+|-----------|---------------------------|-------------------------|
+| `200`     | application/json          | { "caches_removed":0 }  |
+| `401`     | text/plain; charset=utf-8 | not authorized          |
+| `404`     | text/plain; charset=utf-8 | None                    |
 
 ##### Example cURL
+
 ```shell
 curl --request DELETE \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/tasks/test-step/cache \

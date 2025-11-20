@@ -33,14 +33,6 @@ Each table links to detailed documentation for that group.
 | [Logout](./endpoints/authentication.md#logout) | `GET` | `/sky/logout`               | 
 ---
 
-### Pipeline config
-
-| Description                   | Method | Endpoint                                                         |
-|-------------------------------|--------|------------------------------------------------------------------|
-| [Get pipeline configuration](./endpoints/pipelines.md#get-pipeline-configuration)    | `GET`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
-| [Create/Update pipeline configuration](./endpoints/pipelines.md#createupdate-pipeline-configuration) | `PUT`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
-
----
 
 ### Builds
 
@@ -80,12 +72,14 @@ Each table links to detailed documentation for that group.
 
 ### Pipelines
 
-| Description | Method | Endpoint |
-|-------------|--------|----------|
+| Description                   | Method | Endpoint                                                         |
+|-------------------------------|--------|------------------------------------------------------------------|
+| [Get pipeline configuration](./endpoints/pipelines.md#get-pipeline-configuration)    | `GET`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
+| [Create/Update pipeline configuration](./endpoints/pipelines.md#createupdate-pipeline-configuration) | `PUT`  | `/api/v1/teams/:team_name/pipelines/:pipeline_name/config`        |
 | [List all pipelines (across teams)](./endpoints/pipelines.md#list-all-pipelines) | `GET` | `/api/v1/pipelines` |
 | [List pipelines for a team](./endpoints/pipelines.md#list-pipelines-for-team) | `GET` | `/api/v1/teams/:team_name/pipelines` |
 | [Get pipeline details](./endpoints/pipelines.md#get-pipeline-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
-| [Delete a pipeline](./endpoints/pipelines.md#delete-pipeline) | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
+| [Delete a pipeline](./endpoints/pipelines.md#delete-a-pipeline) | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
 | [Set pipeline ordering for a team](./endpoints/pipelines.md#set-pipeline-ordering-for-a-team) | `PUT` | `/api/v1/teams/:team_name/pipelines/ordering` |
 | [Set pipeline ordering within a group](./endpoints/pipelines.md#set-pipeline-ordering-within-a-group) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/ordering` |
 | [Pause a pipeline](./endpoints/pipelines.md#pause-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/pause` |
@@ -106,15 +100,15 @@ Each table links to detailed documentation for that group.
 | Description                                                      | Method   | Endpoint                                                                 |
 |------------------------------------------------------------------|----------|-------------------------------------------------------------------------|
 | [List all resources across pipelines](./endpoints/resources.md#list-all-resources) | `GET`    | `/api/v1/resources`                                                      |
-| [List resources in a pipeline](./endpoints/resources.md#list-resources)           | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources`            |
-| [List shared info for a resource](./endpoints/resources.md#shared-resource)       | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/shared` |
-| [List shared info for a resource type](./endpoints/resources.md#shared-resource-type) | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/shared` |
-| [List resource types in a pipeline](./endpoints/resources.md#list-resource-types) | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types`       |
-| [Get resource details](./endpoints/resources.md#get-resource)                     | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name` |
-| [Trigger resource check](./endpoints/resources.md#check-resource)                 | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check` |
-| [Trigger resource check via webhook](./endpoints/resources.md#check-resource-webhook) | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check/webhook` |
-| [Trigger resource type check](./endpoints/resources.md#check-resource-type)       | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/check` |
-| [Trigger prototype check](./endpoints/resources.md#check-prototype)               | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/prototypes/:prototype_name/check` |
+| [List resources in a pipeline](./endpoints/resources.md#list-resources-in-a-pipeline)           | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources`            |
+| [List shared info for a resource](./endpoints/resources.md#list-shared-info-for-a-resource)       | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/shared` |
+| [List shared info for a resource type](./endpoints/resources.md#list-shared-info-for-a-resource-type) | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/shared` |
+| [List resource types in a pipeline](./endpoints/resources.md#list-resource-types-in-a-pipeline) | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types`       |
+| [Get resource details](./endpoints/resources.md#get-resource-details)                     | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name` |
+| [Trigger resource check](./endpoints/resources.md#trigger-resource-check)                 | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check` |
+| [Trigger resource check via webhook](./endpoints/resources.md#trigger-resource-check-via-webhook) | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check/webhook` |
+| [Trigger resource type check](./endpoints/resources.md#trigger-resource-type-check)       | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/check` |
+| [Trigger prototype check](./endpoints/resources.md#trigger-prototype-check)               | `POST`   | `/api/v1/teams/:team_name/pipelines/:pipeline_name/prototypes/:prototype_name/check` |
 | [Clear resource cache](./endpoints/resources.md#clear-resource-cache)             | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/cache` |
 
 ---
