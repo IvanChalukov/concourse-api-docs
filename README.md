@@ -83,21 +83,21 @@ Each table links to detailed documentation for that group.
 | Description | Method | Endpoint |
 |-------------|--------|----------|
 | [List all pipelines (across teams)](./endpoints/pipelines.md#list-all-pipelines) | `GET` | `/api/v1/pipelines` |
-| [List pipelines for a team](./endpoints/pipelines.md#list-team-pipelines) | `GET` | `/api/v1/teams/:team_name/pipelines` |
-| [Get pipeline details](./endpoints/pipelines.md#pipeline-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
+| [List pipelines for a team](./endpoints/pipelines.md#list-pipelines-for-team) | `GET` | `/api/v1/teams/:team_name/pipelines` |
+| [Get pipeline details](./endpoints/pipelines.md#get-pipeline-details) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
 | [Delete a pipeline](./endpoints/pipelines.md#delete-pipeline) | `DELETE` | `/api/v1/teams/:team_name/pipelines/:pipeline_name` |
-| [Set pipeline ordering for a team](./endpoints/pipelines.md#order-pipelines) | `PUT` | `/api/v1/teams/:team_name/pipelines/ordering` |
-| [Set pipeline ordering within a group](./endpoints/pipelines.md#order-pipelines-group) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/ordering` |
-| [Pause a pipeline](./endpoints/pipelines.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/pause` |
-| [Archive a pipeline](./endpoints/pipelines.md#archive) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/archive` |
-| [Unpause a pipeline](./endpoints/pipelines.md#pause-unpause) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/unpause` |
-| [Expose a pipeline](./endpoints/pipelines.md#expose-hide) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/expose` |
-| [Hide a pipeline](./endpoints/pipelines.md#expose-hide) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/hide` |
-| [Get pipeline versions database](./endpoints/pipelines.md#versions-db) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/versions-db` |
-| [Rename a pipeline](./endpoints/pipelines.md#rename) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/rename` |
-| [List builds for a pipeline](./endpoints/pipelines.md#pipeline-builds) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` |
-| [Create a build for a pipeline](./endpoints/pipelines.md#create-build) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` |
-| [Get pipeline status badge (SVG)](./endpoints/pipelines.md#pipeline-badge) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/badge` |
+| [Set pipeline ordering for a team](./endpoints/pipelines.md#set-pipeline-ordering-for-a-team) | `PUT` | `/api/v1/teams/:team_name/pipelines/ordering` |
+| [Set pipeline ordering within a group](./endpoints/pipelines.md#set-pipeline-ordering-within-a-group) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/ordering` |
+| [Pause a pipeline](./endpoints/pipelines.md#pause-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/pause` |
+| [Archive a pipeline](./endpoints/pipelines.md#archive-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/archive` |
+| [Unpause a pipeline](./endpoints/pipelines.md#unpause-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/unpause` |
+| [Expose a pipeline](./endpoints/pipelines.md#expose-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/expose` |
+| [Hide a pipeline](./endpoints/pipelines.md#hide-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/hide` |
+| [Get pipeline versions database](./endpoints/pipelines.md#get-pipeline-versions-database) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/versions-db` |
+| [Rename a pipeline](./endpoints/pipelines.md#rename-a-pipeline) | `PUT` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/rename` |
+| [List builds for a pipeline](./endpoints/pipelines.md#list-builds-for-a-pipeline) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` |
+| [Create a build for a pipeline](./endpoints/pipelines.md#create-a-build-for-a-pipeline) | `POST` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/builds` |
+| [Get pipeline status badge (SVG)](./endpoints/pipelines.md#get-pipeline-status-badge-svg) | `GET` | `/api/v1/teams/:team_name/pipelines/:pipeline_name/badge` |
 
 ---
 
