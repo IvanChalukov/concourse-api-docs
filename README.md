@@ -174,8 +174,8 @@ Each table links to detailed documentation for that group.
 
 | Description | Method | Endpoint |
 |-------------|--------|----------|
-| [Get current user info](./endpoints/users.md#get-user) | `GET` | `/api/v1/user` |
-| [List active users since timestamp](./endpoints/users.md#list-active-users-since) | `GET` | `/api/v1/users` |
+| [Get current user info](./endpoints/users.md#get-current-user-info) | `GET` | `/api/v1/user` |
+| [List active users since timestamp](./endpoints/users.md#list-active-users-since-timestamp) | `GET` | `/api/v1/users` |
 
 ---
 
