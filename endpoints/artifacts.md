@@ -8,6 +8,7 @@
 > | name           |  type     | data type                | description                                                           |
 > |----------------|-----------|--------------------------|-----------------------------------------------------------------------|
 > | Authorization  |  required | string                   | Bearer auth header with the access token                              |
+> | Content-Type   |  required | string                   | Must be set to `application/octet-stream`                             |
 
 ##### Body
 

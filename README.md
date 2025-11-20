@@ -183,9 +183,9 @@ Each table links to detailed documentation for that group.
 
 | Description | Method | Endpoint |
 |-------------|--------|----------|
-| [List containers for a team](./endpoints/containers.md#list-containers) | `GET` | `/api/v1/teams/:team_name/containers` |
-| [Get container details](./endpoints/containers.md#get-container) | `GET` | `/api/v1/teams/:team_name/containers/:id` |
-| [Hijack a container](./endpoints/containers.md#hijack-container) | `GET` | `/api/v1/teams/:team_name/containers/:id/hijack` |
+| [List containers for a team](./endpoints/containers.md#list-containers-for-a-team) | `GET` | `/api/v1/teams/:team_name/containers` |
+| [Get container details](./endpoints/containers.md#get-container-details) | `GET` | `/api/v1/teams/:team_name/containers/:id` |
+| [Hijack a container](./endpoints/containers.md#hijack-a-container) | `GET` | `/api/v1/teams/:team_name/containers/:id/hijack` |
 | [List destroying containers](./endpoints/containers.md#list-destroying-containers) | `GET` | `/api/v1/containers/destroying` |
 | [Report worker containers](./endpoints/containers.md#report-worker-containers) | `PUT` | `/api/v1/containers/report` |
 
