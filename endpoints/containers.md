@@ -95,7 +95,7 @@ curl --request GET \
 <details open>
  <summary><code>GET</code> <code><b>/api/v1/teams/{team_name}/containers/{id}/hijack</b></code> <code>(Hijack a container)</code></summary>
 
->#### Not a standard HTTP endpoint, requires WebSocket to hijack the container.
+>#### Note: Not a standard HTTP endpoint, requires WebSocket to hijack the container.
 </details>
 
 ---

@@ -129,6 +129,7 @@ Each table links to detailed documentation for that group.
 | [List builds with version as output](./endpoints/resource-versions.md#list-builds-with-version-as-output)   | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/output_of` |
 | [Get downstream resource causality](./endpoints/resource-versions.md#get-downstream-causality)              | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/downstream` |
 | [Get upstream resource causality](./endpoints/resource-versions.md#get-upstream-causality)                  | `GET`    | `/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/versions/:resource_config_version_id/upstream`   |
+---
 
 ### CCMenu
 
@@ -140,16 +141,15 @@ Each table links to detailed documentation for that group.
 
 ### Workers
 
-| Description                                   | Method | Endpoint                                      |
-|-----------------------------------------------|--------|-----------------------------------------------|
-| [List all workers](./endpoints/workers.md#list-workers)           | `GET`  | `/api/v1/workers`                             |
-| [Register a new worker](./endpoints/workers.md#register-worker)   | `POST` | `/api/v1/workers`                             |
-| [Land a worker](./endpoints/workers.md#land-worker)               | `PUT`  | `/api/v1/workers/:worker_name/land`           |
-| [Retire a worker](./endpoints/workers.md#retire-worker)           | `PUT`  | `/api/v1/workers/:worker_name/retire`         |
-| [Prune a worker](./endpoints/workers.md#prune-worker)             | `PUT`  | `/api/v1/workers/:worker_name/prune`          |
-| [Heartbeat a worker](./endpoints/workers.md#heartbeat-worker)     | `PUT`  | `/api/v1/workers/:worker_name/heartbeat`      |
-| [Delete a worker](./endpoints/workers.md#delete-worker)           | `DELETE` | `/api/v1/workers/:worker_name`               |
-
+| Description                                                           | Method   | Endpoint                                      |
+|-----------------------------------------------------------------------|----------|-----------------------------------------------|
+| [List all workers](./endpoints/workers.md#list-all-workers)           | `GET`    | `/api/v1/workers`                             |
+| [Register a new worker](./endpoints/workers.md#register-a-new-worker) | `POST`   | `/api/v1/workers`                             |
+| [Land a worker](./endpoints/workers.md#land-a-worker)                 | `PUT`    | `/api/v1/workers/:worker_name/land`           |
+| [Retire a worker](./endpoints/workers.md#retire-a-worker)             | `PUT`    | `/api/v1/workers/:worker_name/retire`         |
+| [Prune a worker](./endpoints/workers.md#prune-a-worker)               | `PUT`    | `/api/v1/workers/:worker_name/prune`          |
+| [Heartbeat a worker](./endpoints/workers.md#heartbeat-a-worker)       | `PUT`    | `/api/v1/workers/:worker_name/heartbeat`      |
+| [Delete a worker](./endpoints/workers.md#delete-a-worker)             | `DELETE` | `/api/v1/workers/:worker_name`                |
 ---
 
 ### Cluster info
