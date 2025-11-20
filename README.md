@@ -160,13 +160,13 @@ Each table links to detailed documentation for that group.
 
 ### Cluster info
 
-| Description                                   | Method | Endpoint                   |
-|-----------------------------------------------|--------|----------------------------|
-| [Get current log level](./endpoints/cluster-info.md#get-log-level)         | `GET`  | `/api/v1/log-level`         |
-| [Set log level](./endpoints/cluster-info.md#set-log-level)                 | `PUT`  | `/api/v1/log-level`         |
-| [Download Concourse CLI binary](./endpoints/cluster-info.md#download-cli)  | `GET`  | `/api/v1/cli`               |
-| [Get cluster info](./endpoints/cluster-info.md#get-info)                   | `GET`  | `/api/v1/info`              |
-| [Get credential manager info](./endpoints/cluster-info.md#get-info-creds)  | `GET`  | `/api/v1/info/creds`        |
+| Description                                                                                 | Method | Endpoint                   |
+|---------------------------------------------------------------------------------------------|--------|----------------------------|
+| [Get current log level](./endpoints/cluster-info.md#get-current-log-level)                  | `GET`  | `/api/v1/log-level`        |
+| [Set log level](./endpoints/cluster-info.md#set-log-level)                                  | `PUT`  | `/api/v1/log-level`        |
+| [Download Concourse CLI binary](./endpoints/cluster-info.md#download-concourse-cli-binary)  | `GET`  | `/api/v1/cli`              |
+| [Get cluster info](./endpoints/cluster-info.md#get-cluster-info)                            | `GET`  | `/api/v1/info`             |
+| [Get credential manager info](./endpoints/cluster-info.md#get-credential-manager-info)      | `GET`  | `/api/v1/info/creds`       |
 
 ---
 
