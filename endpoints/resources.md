@@ -2,7 +2,7 @@
 
 ### List all resources
 
-<details>
+<details open>
  <summary><code>GET</code> <code><b>/api/v1/resources</b></code> <code>(lists all resources across pipelines)</code></summary>
 
 ##### Responses
@@ -55,11 +55,12 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### List resources in a pipeline
 
-<details>
+<details open>
  <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources</b></code> <code>(lists resources in a pipeline)</code></summary>
 
 ##### Headers
@@ -116,11 +117,12 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### List shared info for a resource
 
-<details>
+<details open>
  <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/shared</b></code> <code>(lists shared info for a resource)</code></summary>
  
 ##### Headers
@@ -160,12 +162,13 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### List shared info for a resource type
 
-<details>
- <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/shared</b></code> <code>(lists shared info for a resource type)</code></summary>
+<details open>
+    <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/shared</b></code> <code>(lists shared info for a resource type)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -204,11 +207,12 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### List resource types in a pipeline
-<details>
- <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types</b></code> <code>(lists resource types in a pipeline)</code></summary>
+<details open>
+    <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types</b></code> <code>(lists resource types in a pipeline)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -246,11 +250,12 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### Get resource details
-<details>
- <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name</b></code> <code>(get resource details)</code></summary>
+<details open>
+    <summary><code>GET</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name</b></code> <code>(get resource details)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -318,11 +323,12 @@ curl --request GET \
 ```
 
 </details>
+
 ---
 
 ### Trigger resource check
-<details>
- <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check</b></code> <code>(triggers resource check)</code></summary>
+<details open>
+    <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check</b></code> <code>(triggers resource check)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -373,11 +379,12 @@ curl --request POST \
 ```
 
 </details>
+
 ---
 
 ### Trigger resource check via webhook
-<details>
- <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check/webhook</b></code> <code>(triggers resource check via webhook)</code></summary>
+<details open>
+    <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/check/webhook</b></code> <code>(triggers resource check via webhook)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -422,11 +429,12 @@ curl --request POST \
 ```
 
 </details>
+
 ---
 
 ### Trigger resource type check
-<details>
- <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/check</b></code> <code>(triggers resource type check)</code></summary>
+<details open>
+    <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resource-types/:resource_type_name/check</b></code> <code>(triggers resource type check)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -474,9 +482,11 @@ curl --request POST \
 
 </details>
 
+---
+
 ### Trigger prototype check
-<details>
- <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/prototypes/:prototype_name/check</b></code> <code>(triggers prototype check)</code></summary>
+<details open>
+    <summary><code>POST</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/prototypes/:prototype_name/check</b></code> <code>(triggers prototype check)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
@@ -521,11 +531,12 @@ curl --request POST \
 ```
 
 </details>
+
 ---
 
 ### Clear resource cache
-<details>
- <summary><code>DELETE</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/cache</b></code> <code>(clears resource cache)</code></summary>
+<detail open>
+    <summary><code>DELETE</code> <code><b>/api/v1/teams/:team_name/pipelines/:pipeline_name/resources/:resource_name/cache</b></code> <code>(clears resource cache)</code></summary>
 
 ##### Headers
 > | name           | type     | data type | description                              |
