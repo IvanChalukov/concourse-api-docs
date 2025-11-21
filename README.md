@@ -135,7 +135,7 @@ Each table links to detailed documentation for that group.
 
 | Description | Method | Endpoint |
 |-------------|--------|----------|
-| [Generate CCMenu XML feed for pipelines](./endpoints/ccmenu.md) | `GET` | `/api/v1/teams/:team_name/cc.xml` |
+| [Generate CCMenu XML feed for pipelines](./endpoints/ccmenu.md#generate-ccmenu-xml-feed-for-pipelines) | `GET` | `/api/v1/teams/:team_name/cc.xml` |
 
 ---
 
