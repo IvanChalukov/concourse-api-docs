@@ -80,7 +80,7 @@ curl --request GET \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions \
-  --header 'authorization: Bearer <token>' 
+  --header 'authorization: Bearer <token>'
 ```
 
 </details>
@@ -120,7 +120,7 @@ curl --request DELETE \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resource-types/github-release/versions \
-  --header 'authorization: Bearer 9lFugMdIkIkMl2oV5ZrqovtJYnSWKSBpAAAAAA' 
+  --header 'authorization: Bearer <token>'
 ```
 
 </details>
@@ -262,10 +262,10 @@ curl --request PUT \
 
 ---
 
-### Unpin a resource
+### Unpin a resource version
 
 <details open>
-    <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/resources/{resource_name}/unpin</b></code> <code>(unpins a resource)</code></summary>
+    <summary><code>PUT</code> <code><b>/api/v1/teams/{team_name}/pipelines/{pipeline_name}/resources/{resource_name}/unpin</b></code> <code>(unpins a resource version)</code></summary>
 
 ##### Headers
 > | name           |  type     | data type               | description                                                           |

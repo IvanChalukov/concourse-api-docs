@@ -421,7 +421,7 @@ curl --request GET \
 | HTTP Code | Content-Type       | Response Example                |
 |:---------:|:------------------|:---------------------------------|
 | `200`     | `application/json` | None                            |
-| `400`     | text/plain; charset=utf-8 | Wall message cannot be empty |
+| `400`     | text/plain; charset=utf-8 | None |
 | `401`     | text/plain; charset=utf-8 | not authorized               |
 | `404`     | text/plain; charset=utf-8 | build not found              |    
 

@@ -366,7 +366,7 @@ Could be an empty JSON object `{}`.
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/workers/99d24f8ad9cf/heartbeat \
-  --header 'authorization: Bearer MlP2jPysWb7NgIpBhIZFYWy+RK3zgiBpAAAAAA' \
+  --header 'authorization: Bearer <token>' \
   --header 'content-type: application/json' \
   --data '{}'
 ```
