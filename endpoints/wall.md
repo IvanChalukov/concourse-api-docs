@@ -73,7 +73,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/wall \
-  --header 'authorization: bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "message": "This is a wall message2",
@@ -105,7 +105,7 @@ curl --request PUT \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/wall \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 

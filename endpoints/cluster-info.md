@@ -19,7 +19,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/log-level \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -50,7 +50,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/log-level \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
   --header 'content-type: text/plain' \
   --data 'info'
 ```
@@ -160,7 +160,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url 'http://localhost:8080/api/v1/info/creds'
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 

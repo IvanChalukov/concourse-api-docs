@@ -41,7 +41,7 @@
 ```shell
 curl --request POST \
   --url http://localhost:8080/api/v1/teams/main/artifacts \
-  --header 'authorization: bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --data /path/to/artifact/artifact.tar.gz
 ```
 </details>
@@ -77,7 +77,7 @@ curl --request POST \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/artifacts/1 \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 

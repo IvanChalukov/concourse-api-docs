@@ -48,7 +48,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/volumes \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -90,7 +90,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url 'http://localhost:8080/api/v1/volumes/destroying?worker_name=e98fdeb3d200' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -140,7 +140,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url 'http://localhost:8080/api/v1/volumes/report?worker_name=e98fdeb3d200' \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '[
   "volume-handle-1",

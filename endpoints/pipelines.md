@@ -41,7 +41,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/update-pipeline \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/x-www-form-urlencoded'
 ```
 </details>
@@ -93,7 +93,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/xss/config \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --header 'x-concourse-config-version: 53' \
   --data '{
@@ -172,7 +172,7 @@ curl --request PUT \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/pipelines \
-  --header 'authorization: Bearer <token>' 
+  --header 'authorization: Bearer <access_token>' 
 ```
 
 </details>
@@ -219,7 +219,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -264,7 +264,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -291,7 +291,7 @@ curl --request GET \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -329,7 +329,7 @@ curl --request DELETE \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/ordering \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '[
   "xs1s1",
@@ -382,7 +382,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/xss/ordering \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '[
     {
@@ -423,7 +423,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/pause \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -450,7 +450,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/archive \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -476,7 +476,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/unpause \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -502,7 +502,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/expose \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -528,7 +528,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/hide \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -574,7 +574,7 @@ curl --request PUT \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/versions-db \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -608,7 +608,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/old-pipeline-name/rename \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "name": "xss2"
@@ -659,7 +659,7 @@ curl --request PUT \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/builds \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -693,7 +693,7 @@ curl --request GET \
 ```shell
 curl --request POST \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/builds \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "job": "hello-world-job1"
@@ -723,7 +723,7 @@ curl --request POST \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/alpha/badge \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>

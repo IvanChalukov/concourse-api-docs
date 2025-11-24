@@ -131,7 +131,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/workers \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -168,7 +168,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/workers/e98fdeb3d200/land \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -195,7 +195,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/workers/e98fdeb3d200/retire \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -223,7 +223,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/workers/e98fdeb3d200/prune \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -366,7 +366,7 @@ Could be an empty JSON object `{}`.
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/workers/99d24f8ad9cf/heartbeat \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{}'
 ```
@@ -395,7 +395,7 @@ curl --request PUT \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/workers/e98fdeb3d200 \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 

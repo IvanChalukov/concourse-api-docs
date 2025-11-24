@@ -51,7 +51,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/resources \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -113,7 +113,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources \
-    --header 'authorization: bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -158,7 +158,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/shared \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -203,7 +203,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resource-types/rss/shared \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -246,7 +246,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resource-types \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -319,7 +319,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/dinosaur-comics \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -371,7 +371,7 @@ curl --request GET \
 ```shell
 curl --request POST \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/check \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "from": null
@@ -425,7 +425,7 @@ curl --request POST \
 ```shell
 curl --request POST \
   --url 'http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/check/webhook?webhook_token=<webhook_token>' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -477,7 +477,7 @@ curl --request POST \
 ```shell
 curl --request POST \
   --url 'http://localhost:8080/api/v1/teams/main/pipelines/inout/resource-types/rss/check' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -527,7 +527,7 @@ curl --request POST \
 ```shell
 curl --request POST \
   --url 'http://localhost:8080/api/v1/teams/main/pipelines/inout/prototypes/otel-java-instrumentation-github-release/check' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -565,7 +565,7 @@ curl --request POST \
 ```shell
 curl --request DELETE \
   --url 'http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/rss/cache' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>

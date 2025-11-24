@@ -71,7 +71,7 @@
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/jobs \
-    --header 'authorization: Bearer <token>' 
+    --header 'authorization: Bearer <access_token>' 
 ```
 
 </details>
@@ -148,7 +148,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs \
-    --header 'authorization: Bearer <token>' 
+    --header 'authorization: Bearer <access_token>' 
 ```
 
 </details>
@@ -217,7 +217,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -294,7 +294,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/builds \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -343,7 +343,7 @@ curl --request GET \
 ```shell
 curl --request POST \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/builds \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -392,7 +392,7 @@ curl --request POST \
 ```shell
 curl --request POST \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/builds/303193 \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -476,7 +476,7 @@ curl --request POST \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/inputs \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -528,7 +528,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/builds/301596 \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -559,7 +559,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/pause \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -589,7 +589,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/unpause \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -620,7 +620,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/schedule \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -650,7 +650,7 @@ curl --request PUT \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/badge \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -681,7 +681,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/pipelines/test/jobs/test-job/badge \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -712,7 +712,7 @@ curl --request GET \
 ```shell
 curl --request DELETE \
     --url http://localhost:8080/api/v1/teams/main/pipelines/test/jobs/test-job/tasks/test-step/cache \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 
 </details>

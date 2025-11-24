@@ -41,7 +41,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/containers \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -85,7 +85,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/containers \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -135,7 +135,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url 'http://localhost:8080/api/v1/containers/destroying?worker_name=e98fdeb3d200' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -185,7 +185,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url 'http://localhost:8080/api/v1/containers/report?worker_name=e98fdeb3d200' \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '[
   "container-handle-1",

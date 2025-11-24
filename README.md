@@ -7,18 +7,29 @@ It’s designed for developers and DevOps engineers who want to integrate Concou
 
 > 💡 The Concourse API powers the `fly` CLI and the Concourse web UI.  
 
----
-
 ## 🌐 Base URL
 
-All requests use the following base URL: `https://<your-concourse-domain>/api/v1`
+All requests use the following base URL: `https://<your-concourse-domain>`
 > Replace `<your-concourse-domain>` with your own Concourse installation URL.  
-> Example: `https://ci.example.com/api/v1`
+> Example endpoint: `https://ci.example.com/api/v1/builds`
 
 ## 🔐 Authentication
 
-All authenticated requests require a **Bearer Token**.
-Obtain a token via token endpoint.
+Most API endpoints require a **Bearer Token** obtained through Concourse’s login flow.
+
+To authenticate, exchange your login credentials for a token using the [Login](./endpoints/authentication.md#login) endpoint.
+
+## 🗂️ Version & Compatibility
+
+This documentation applies to **Concourse API v1**. Current document is based on Concourse version 7.14.3.
+
+While most endpoints are stable, Concourse may introduce changes or deprecations between releases.  
+If you are using a specific Concourse version, refer to that version’s release notes for API-related changes.
+
+> **Tip:** You can check your server’s version using:
+> ```bash
+> curl https://<your-concourse-domain>/api/v1/info
+> ```
 
 ## 📘 API Endpoint Quick Reference
 
@@ -36,17 +47,17 @@ Each table links to detailed documentation for that group.
 
 ### Builds
 
-| Description                                                                       | Method | Endpoint                                      |
-|-----------------------------------------------------------------------------------|--------|-----------------------------------------------|
-| [List all builds](./endpoints/builds.md#list-builds)                              | `GET`  | `/api/v1/builds`                              |
-| [Get build details](./endpoints/builds.md#get-build-details)                      | `GET`  | `/api/v1/builds/:build_id`                    |
-| [Get build plan](./endpoints/builds.md#get-build-plan)                            | `GET`  | `/api/v1/builds/:build_id/plan`               |
-| [Stream build events](./endpoints/builds.md#stream-build-events)                  | `GET`  | `/api/v1/builds/:build_id/events`             |
-| [Get build resources](./endpoints/builds.md#get-build-resources)                  | `GET`  | `/api/v1/builds/:build_id/resources`          |
-| [Abort a build](./endpoints/builds.md#abort-build)                                | `PUT`  | `/api/v1/builds/:build_id/abort`              |
-| [Get build preparation status](./endpoints/builds.md#get-build-preparation-status)| `GET`  | `/api/v1/builds/:build_id/preparation`        |
-| [List build artifacts](./endpoints/builds.md#get-build-artifacts)                 | `GET`  | `/api/v1/builds/:build_id/artifacts`          |
-| [Add comment to build](./endpoints/builds.md#add-comment-to-build)                | `PUT`  | `/api/v1/builds/:build_id/comment`            |
+| Description                                                                        | Method | Endpoint                                      |
+|------------------------------------------------------------------------------------|--------|-----------------------------------------------|
+| [List all builds](./endpoints/builds.md#list-builds)                               | `GET`  | `/api/v1/builds`                              |
+| [Get build details](./endpoints/builds.md#get-build-details)                       | `GET`  | `/api/v1/builds/:build_id`                    |
+| [Get build plan](./endpoints/builds.md#get-build-plan)                             | `GET`  | `/api/v1/builds/:build_id/plan`               |
+| [Stream build events](./endpoints/builds.md#stream-build-events)                   | `GET`  | `/api/v1/builds/:build_id/events`             |
+| [Get build resources](./endpoints/builds.md#get-build-resources)                   | `GET`  | `/api/v1/builds/:build_id/resources`          |
+| [Abort a build](./endpoints/builds.md#abort-build)                                 | `PUT`  | `/api/v1/builds/:build_id/abort`              |
+| [Get build preparation status](./endpoints/builds.md#get-build-preparation-status) | `GET`  | `/api/v1/builds/:build_id/preparation`        |
+| [List build artifacts](./endpoints/builds.md#list-build-artifacts)                 | `GET`  | `/api/v1/builds/:build_id/artifacts`          |
+| [Add comment to build](./endpoints/builds.md#add-comment-to-build)                 | `PUT`  | `/api/v1/builds/:build_id/comment`            |
 
 ---
 

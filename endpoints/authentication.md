@@ -71,8 +71,8 @@ curl --request POST \
 ```shell
 curl --request GET \
   --url http://localhost:8080/sky/logout \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/x-www-form-urlencoded' \
-  --header 'cookie: skymarshal_auth="bearer <access_token>";' \
-  --cookie 'skymarshal_auth="bearer <access_token>";'
+  --header 'cookie: skymarshal_auth="Bearer <access_token>";' \
+  --cookie 'skymarshal_auth="Bearer <access_token>";'
 ```

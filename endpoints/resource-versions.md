@@ -40,7 +40,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions \
-  --header 'authorization: Bearer <token>' 
+  --header 'authorization: Bearer <access_token>' 
 ```
 
 </details>
@@ -80,7 +80,7 @@ curl --request GET \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -120,7 +120,7 @@ curl --request DELETE \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resource-types/github-release/versions \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -166,7 +166,7 @@ curl --request DELETE \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/525 \
-  --header 'authorization: Bearer <token>' 
+  --header 'authorization: Bearer <access_token>' 
 ```
 
 </details>
@@ -196,7 +196,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/525/enable \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -226,7 +226,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/525/disable \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -255,7 +255,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/525/pin \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -285,7 +285,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/unpin \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -322,7 +322,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/pin-comment \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'Content-Type: application/json' \
   --data '{
     "comment": "This is a pin comment"
@@ -378,7 +378,7 @@ curl --request PUT \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/591/input_to \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -430,7 +430,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/591/output_of \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -508,7 +508,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/591/downstream \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>
@@ -587,7 +587,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/pipelines/inout/resources/otel-java-instrumentation-github-release/versions/591/upstream \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 
 </details>

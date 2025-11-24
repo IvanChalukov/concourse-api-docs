@@ -44,7 +44,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -90,7 +90,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -163,7 +163,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/team \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "auth": {
@@ -228,7 +228,7 @@ curl --request PUT \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/teams/team/rename \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "name": "new-team-name"
@@ -261,7 +261,7 @@ curl --request PUT \
 ```shell
 curl --request DELETE \
   --url http://localhost:8080/api/v1/teams/team \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -311,7 +311,7 @@ curl --request DELETE \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/builds \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -387,7 +387,7 @@ curl --request GET \
 ```shell
 curl --request POST \
   --url http://localhost:8080/api/v1/teams/main/builds \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "id": "some-plan-id",

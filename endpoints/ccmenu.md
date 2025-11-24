@@ -29,7 +29,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/teams/main/cc.xml \
-  --header 'authorization: bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 

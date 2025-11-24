@@ -44,7 +44,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/user \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -94,7 +94,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url 'http://localhost:8080/api/v1/users?since=1970-01-01' \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 

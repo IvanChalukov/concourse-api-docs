@@ -57,7 +57,7 @@
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/builds \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
 ```
 </details>
 
@@ -112,7 +112,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/builds/298719 \
-  --header 'authorization: Bearer <token>' 
+  --header 'authorization: Bearer <access_token>' 
 ```
 </details>
 
@@ -152,7 +152,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/builds/123/plan \
-  --header 'authorization: Bearer <token>' 
+  --header 'authorization: Bearer <access_token>' 
 ```
 </details>
 
@@ -226,7 +226,7 @@ data: {
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/builds/123/events \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -280,7 +280,7 @@ curl --request GET \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/builds/123/resources \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -308,7 +308,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/builds/123/abort \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -351,13 +351,13 @@ curl --request PUT \
 ```shell
 curl --request GET \
   --url http://localhost:8080/api/v1/builds/123/preparation \
-  --header 'authorization: Bearer <token>'
+  --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
 ---
 
-### Get build artifacts
+### List build artifacts
 
 <details open>
     <summary><code>GET</code> <code><b>/api/v1/builds/{build_id}/artifacts</b></code> <code>(lists artifacts produced by a specific build)</code></summary>
@@ -393,7 +393,7 @@ curl --request GET \
 ```shell
 curl --request GET \
     --url http://localhost:8080/api/v1/builds/123/artifacts \
-    --header 'authorization: Bearer <token>'
+    --header 'authorization: Bearer <access_token>'
 ```
 </details>
 
@@ -430,7 +430,7 @@ curl --request GET \
 ```shell
 curl --request PUT \
   --url http://localhost:8080/api/v1/builds/301596/comment \
-  --header 'authorization: Bearer <token>' \
+  --header 'authorization: Bearer <access_token>' \
   --header 'content-type: application/json' \
   --data '{
   "comment": "test-api"
