@@ -17,7 +17,7 @@ All requests use the following base URL: `https://<your-concourse-domain>`
 
 Most API endpoints require a **Bearer Token** obtained through Concourse’s login flow.
 
-To authenticate, exchange your login credentials for a token using the [Login](./endpoints/authentication.md#login) endpoint.
+To authenticate, exchange your local login credentials for a token using the [Login](./endpoints/authentication.md#login) endpoint.
 
 ## 🗂️ Version & Compatibility
 
@@ -38,10 +38,10 @@ Each table links to detailed documentation for that group.
 
 ### Login/Logout
 
-| Description | Method | Endpoint |
-|-------------|--------|---------|
-| [Login](./endpoints/authentication.md#login)   | `POST` | `/sky/issuer/token` |
-| [Logout](./endpoints/authentication.md#logout) | `GET`  | `/sky/logout`       |
+| Description                                                                        | Method | Endpoint            |
+|------------------------------------------------------------------------------------|--------|---------------------|
+| [Login](./endpoints/authentication.md#login)                                       | `POST` | `/sky/issuer/token` |
+| [Logout](./endpoints/authentication.md#logout)                                     | `GET`  | `/sky/logout`       |
 
 ---
 

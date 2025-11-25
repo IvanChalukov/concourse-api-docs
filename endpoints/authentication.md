@@ -5,20 +5,23 @@
 <details open>
  <summary><code>POST</code> <code><b>/sky/issuer/token</b></code> <code>(issues a new token)</code></summary>
 
+> **Note:** This endpoint uses local user credentials to obtain an access token. For external authentication providers (GitHub, LDAP, SAML, etc.), follow the provider-specific authentication flow to obtain a token.
+
 ##### Headers
-> | name           |  type     | data type               | description                                                           |
-> |----------------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | Authorization  |  required | string                  | Basic auth header with client credentials (Base64 encoded)               |
-> | Content-Type   |  required | string                  | Must be set to `application/x-www-form-urlencoded`                        |
+
+> | name          | type     | data type | description                                                                                                              |
+> |---------------|----------|-----------|--------------------------------------------------------------------------------------------------------------------------|
+> | Authorization | required | string    | Basic auth header with client credentials (Base64 encoded). Client credentials are hard-coded in codebase as `fly:Zmx5`. |
+> | Content-Type  | required | string    | Must be set to `application/x-www-form-urlencoded`                                                                       |
+
 
 ##### Body Parameters
-
-> | name      |  type     | data type               | description                                                           |
-> |-----------|-----------|-------------------------|-----------------------------------------------------------------------|
-> | username  |  required | string                  | The username of the user trying to authenticate                       |
-> | password  |  required | string                  | The password of the user trying to authenticate                       |
-> | grant_type|  required | string                  | Must be set to `password`                                         |
-> | scope     |  optional | string                  | The scopes to be included in the issued token (space-separated)          |
+> | name       | type     | data type | description                                                         |
+> |------------|----------|-----------|---------------------------------------------------------------------|
+> | username   | required | string    | The username of the local user trying to authenticate               |
+> | password   | required | string    | The password of the local user trying to authenticate               |
+> | grant_type | required | string    | Must be set to `password`                                           |
+> | scope      | optional | string    | The scopes to be included in the issued token (space-separated)     |
 
 
 ##### Responses
